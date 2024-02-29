@@ -1,0 +1,351 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "02/29/2024 12:58:48"
+                                                                        
+// Verilog Self-Checking Test Bench (with test vectors) for design :    Lab2_1_1
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module Lab2_1_1_vlg_sample_tst(
+	switch,
+	sampler_tx
+);
+input [3:0] switch;
+output sampler_tx;
+
+reg sample;
+time current_time;
+always @(switch)
+                                                                                
+begin                                                 
+ if ($realtime > 0)                                   
+ begin                                                
+	if ($realtime == 0 || $realtime != current_time)  
+	begin									          
+		if (sample === 1'bx)                          
+			sample = 0;                               
+		else                                          
+			sample = ~sample;                         
+	end										          
+	current_time = $realtime;					      
+ end                                                  
+end                                                   
+
+assign sampler_tx = sample;
+endmodule
+
+module Lab2_1_1_vlg_check_tst (
+	prime,
+	sevensegement,
+	sampler_rx
+);
+input  prime;
+input [0:6] sevensegement;
+input sampler_rx;
+
+reg  prime_expected;
+reg [0:6] sevensegement_expected;
+
+reg  prime_prev;
+reg [0:6] sevensegement_prev;
+
+reg  prime_expected_prev;
+reg [0:6] sevensegement_expected_prev;
+
+reg  last_prime_exp;
+reg [0:6] last_sevensegement_exp;
+
+reg trigger;
+
+integer i;
+integer nummismatches;
+
+reg [1:2] on_first_change ;
+
+
+initial
+begin
+trigger = 0;
+i = 0;
+nummismatches = 0;
+on_first_change = 2'b1;
+end
+
+// update real /o prevs
+
+always @(trigger)
+begin
+	prime_prev = prime;
+	sevensegement_prev = sevensegement;
+end
+
+// update expected /o prevs
+
+always @(trigger)
+begin
+	prime_expected_prev = prime_expected;
+	sevensegement_expected_prev = sevensegement_expected;
+end
+
+
+// expected sevensegement[ 6 ]
+initial
+begin
+	sevensegement_expected[6] = 1'bX;
+end 
+// expected sevensegement[ 5 ]
+initial
+begin
+	sevensegement_expected[5] = 1'bX;
+end 
+// expected sevensegement[ 4 ]
+initial
+begin
+	sevensegement_expected[4] = 1'bX;
+end 
+// expected sevensegement[ 3 ]
+initial
+begin
+	sevensegement_expected[3] = 1'bX;
+end 
+// expected sevensegement[ 2 ]
+initial
+begin
+	sevensegement_expected[2] = 1'bX;
+end 
+// expected sevensegement[ 1 ]
+initial
+begin
+	sevensegement_expected[1] = 1'bX;
+end 
+// expected sevensegement[ 0 ]
+initial
+begin
+	sevensegement_expected[0] = 1'bX;
+end 
+
+// expected prime
+initial
+begin
+	prime_expected = 1'bX;
+end 
+// generate trigger
+always @(prime_expected or prime or sevensegement_expected or sevensegement)
+begin
+	trigger <= ~trigger;
+end
+
+always @(posedge sampler_rx or negedge sampler_rx)
+begin
+`ifdef debug_tbench
+	$display("Scanning pattern %d @time = %t",i,$realtime );
+	i = i + 1;
+	$display("| expected prime = %b | expected sevensegement = %b | ",prime_expected_prev,sevensegement_expected_prev);
+	$display("| real prime = %b | real sevensegement = %b | ",prime_prev,sevensegement_prev);
+`endif
+	if (
+		( prime_expected_prev !== 1'bx ) && ( prime_prev !== prime_expected_prev )
+		&& ((prime_expected_prev !== last_prime_exp) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port prime :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", prime_expected_prev);
+		$display ("     Real value = %b", prime_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_prime_exp = prime_expected_prev;
+	end
+	if (
+		( sevensegement_expected_prev[0] !== 1'bx ) && ( sevensegement_prev[0] !== sevensegement_expected_prev[0] )
+		&& ((sevensegement_expected_prev[0] !== last_sevensegement_exp[0]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port sevensegement[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", sevensegement_expected_prev);
+		$display ("     Real value = %b", sevensegement_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_sevensegement_exp[0] = sevensegement_expected_prev[0];
+	end
+	if (
+		( sevensegement_expected_prev[1] !== 1'bx ) && ( sevensegement_prev[1] !== sevensegement_expected_prev[1] )
+		&& ((sevensegement_expected_prev[1] !== last_sevensegement_exp[1]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port sevensegement[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", sevensegement_expected_prev);
+		$display ("     Real value = %b", sevensegement_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_sevensegement_exp[1] = sevensegement_expected_prev[1];
+	end
+	if (
+		( sevensegement_expected_prev[2] !== 1'bx ) && ( sevensegement_prev[2] !== sevensegement_expected_prev[2] )
+		&& ((sevensegement_expected_prev[2] !== last_sevensegement_exp[2]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port sevensegement[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", sevensegement_expected_prev);
+		$display ("     Real value = %b", sevensegement_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_sevensegement_exp[2] = sevensegement_expected_prev[2];
+	end
+	if (
+		( sevensegement_expected_prev[3] !== 1'bx ) && ( sevensegement_prev[3] !== sevensegement_expected_prev[3] )
+		&& ((sevensegement_expected_prev[3] !== last_sevensegement_exp[3]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port sevensegement[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", sevensegement_expected_prev);
+		$display ("     Real value = %b", sevensegement_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_sevensegement_exp[3] = sevensegement_expected_prev[3];
+	end
+	if (
+		( sevensegement_expected_prev[4] !== 1'bx ) && ( sevensegement_prev[4] !== sevensegement_expected_prev[4] )
+		&& ((sevensegement_expected_prev[4] !== last_sevensegement_exp[4]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port sevensegement[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", sevensegement_expected_prev);
+		$display ("     Real value = %b", sevensegement_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_sevensegement_exp[4] = sevensegement_expected_prev[4];
+	end
+	if (
+		( sevensegement_expected_prev[5] !== 1'bx ) && ( sevensegement_prev[5] !== sevensegement_expected_prev[5] )
+		&& ((sevensegement_expected_prev[5] !== last_sevensegement_exp[5]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port sevensegement[5] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", sevensegement_expected_prev);
+		$display ("     Real value = %b", sevensegement_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_sevensegement_exp[5] = sevensegement_expected_prev[5];
+	end
+	if (
+		( sevensegement_expected_prev[6] !== 1'bx ) && ( sevensegement_prev[6] !== sevensegement_expected_prev[6] )
+		&& ((sevensegement_expected_prev[6] !== last_sevensegement_exp[6]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port sevensegement[6] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", sevensegement_expected_prev);
+		$display ("     Real value = %b", sevensegement_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_sevensegement_exp[6] = sevensegement_expected_prev[6];
+	end
+
+	trigger <= ~trigger;
+end
+initial 
+
+begin 
+$timeformat(-12,3," ps",6);
+#1000000;
+if (nummismatches > 0)
+	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
+else
+	$display ("Simulation passed !");
+$finish;
+end 
+endmodule
+
+module Lab2_1_1_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg [3:0] switch;
+// wires                                               
+wire prime;
+wire [0:6] sevensegement;
+
+wire sampler;                             
+
+// assign statements (if any)                          
+Lab2_1_1 i1 (
+// port map - connection between master ports and signals/registers   
+	.prime(prime),
+	.sevensegement(sevensegement),
+	.switch(switch)
+);
+// switch[ 3 ]
+initial
+begin
+	repeat(6)
+	begin
+		switch[3] = 1'b0;
+		switch[3] = #80000 1'b1;
+		# 80000;
+	end
+	switch[3] = 1'b0;
+end 
+// switch[ 2 ]
+initial
+begin
+	repeat(12)
+	begin
+		switch[2] = 1'b0;
+		switch[2] = #40000 1'b1;
+		# 40000;
+	end
+	switch[2] = 1'b0;
+end 
+// switch[ 1 ]
+always
+begin
+	switch[1] = 1'b0;
+	switch[1] = #20000 1'b1;
+	#20000;
+end 
+// switch[ 0 ]
+always
+begin
+	switch[0] = 1'b0;
+	switch[0] = #10000 1'b1;
+	#10000;
+end 
+
+Lab2_1_1_vlg_sample_tst tb_sample (
+	.switch(switch),
+	.sampler_tx(sampler)
+);
+
+Lab2_1_1_vlg_check_tst tb_out(
+	.prime(prime),
+	.sevensegement(sevensegement),
+	.sampler_rx(sampler)
+);
+endmodule
+

@@ -1,0 +1,13 @@
+entity entity-name is
+		port (A: in data-type ;
+		      B: in data-type ;
+		      C: in data-type ;
+		      D: in data-type ;
+				oa: in data-type ;
+		      ob: in data-type ;
+		      oc: in data-type ;
+		      od: in data-type ;
+				oe: in data-type ;
+		      of: in data-type ;
+		      og: in data-type)
+end entity-name ;  

@@ -84,82 +84,82 @@ Z31 !s100 KM[DHFG0h71XdMR@Ge^Pa3
 !s85 0
 !s101 -O0
 vLab1_2
-Z32 Ino_U<hkeKRAOU_:i3kL]e3
-Z33 V2^BO>:1M6;UoBzbmec:lk2
-Z34 dD:\Users\USER\Desktop\code\Digital_Systems\Lab1\simulation\qsim
-Z35 w1708516708
-Z36 8Lab1_2.vo
-Z37 FLab1_2.vo
+Z32 !s100 OUO]25Zk_96k?3FhF>[TE0
+Z33 I5JDz9:@SN`NLO_he_3Y2G3
+Z34 V2^BO>:1M6;UoBzbmec:lk2
+Z35 dD:\Users\USER\Desktop\code\Digital_Systems\Lab1\simulation\qsim
+Z36 w1709176594
+Z37 8Lab1_2.vo
+Z38 FLab1_2.vo
 L0 31
 R7
 r1
 31
+Z39 !s90 -work|work|Lab1_2.vo|
 R8
-Z38 n@lab1_2
+Z40 n@lab1_2
 !i10b 1
-Z39 !s100 GXi94>=3^MCJSH8jol@fL2
 !s85 0
-Z40 !s108 1708516709.255000
-Z41 !s107 Lab1_2.vo|
-Z42 !s90 -work|work|Lab1_2.vo|
+Z41 !s108 1709176594.838000
+Z42 !s107 Lab1_2.vo|
 !s101 -O0
 vLab1_2_vlg_check_tst
 !i10b 1
-!s100 Ac@T[JEJe3d[dMi[KPE9z0
-IWoEoO<RM7<::FVhkQBLgh2
-V7GnZ6hXM4fcnfAO3MgL<j0
-R34
-Z43 w1708516707
-Z44 8Waveform1.vwf.vt
-Z45 FWaveform1.vwf.vt
+Z43 !s100 Gc1c00Y>1C0bYEI]QA8I63
+Z44 IBYIX=zlOFT;h9e>mC]A>c1
+Z45 V7GnZ6hXM4fcnfAO3MgL<j0
+R35
+Z46 w1709176593
+Z47 8Waveform1.vwf.vt
+Z48 FWaveform1.vwf.vt
 L0 73
 R7
 r1
 !s85 0
 31
-Z46 !s108 1708516709.299000
-Z47 !s107 Waveform1.vwf.vt|
-Z48 !s90 -work|work|Waveform1.vwf.vt|
+Z49 !s108 1709176594.883000
+Z50 !s107 Waveform1.vwf.vt|
+Z51 !s90 -work|work|Waveform1.vwf.vt|
 !s101 -O0
 R8
-n@lab1_2_vlg_check_tst
+Z52 n@lab1_2_vlg_check_tst
 vLab1_2_vlg_sample_tst
 !i10b 1
-!s100 XL1bNlC]G;MH2lJVcYohE2
-I`@o=eQzP:EhfL6XE:OfjZ2
-VnGNVBP7`CfT8hT^HMC`<Q3
-R34
-R43
-R44
-R45
+Z53 !s100 XL1bNlC]G;MH2lJVcYohE2
+Z54 I`@o=eQzP:EhfL6XE:OfjZ2
+Z55 VnGNVBP7`CfT8hT^HMC`<Q3
+R35
+R46
+R47
+R48
 L0 29
 R7
 r1
 !s85 0
 31
+R49
+R50
+R51
+!s101 -O0
+R8
+Z56 n@lab1_2_vlg_sample_tst
+vLab1_2_vlg_vec_tst
+!i10b 1
+!s100 O=CPK@<=JF;kdoL05FdGf3
+I4e:Dn=RZncJ:kM0T<n=CL1
+Z57 VFg?74N;ZSVB8nAj4h6i?62
+R35
 R46
 R47
 R48
-!s101 -O0
-R8
-n@lab1_2_vlg_sample_tst
-vLab1_2_vlg_vec_tst
-!i10b 1
-!s100 XOoYoBLC^DcTNUYILXjnB3
-IA1l0=kE;8YRiR5TTIABHW2
-VFg?74N;ZSVB8nAj4h6i?62
-R34
-R43
-R44
-R45
-L0 276
+Z58 L0 276
 R7
 r1
 !s85 0
 31
-R46
-R47
-R48
+R49
+R50
+R51
 !s101 -O0
 R8
-n@lab1_2_vlg_vec_tst
+Z59 n@lab1_2_vlg_vec_tst
