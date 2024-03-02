@@ -1,8 +1,8 @@
 vendor_name = ModelSim
-source_file = 1, D:/Users/USER/Desktop/code/Digital_Systems/Lab1/Lab1_1_1.bdf
-source_file = 1, D:/Users/USER/Desktop/code/Digital_Systems/Lab1/Waveform.vwf
-source_file = 1, D:/Users/USER/Desktop/code/Digital_Systems/Lab1/db/Lab1_1_1.cbx.xml
-source_file = 1, D:/Users/USER/Desktop/code/Digital_Systems/Lab1/lab1_1.bdf
+source_file = 1, C:/Users/user/Desktop/code/Digital_Systems/Lab1/Lab1_1_1.bdf
+source_file = 1, C:/Users/user/Desktop/code/Digital_Systems/Lab1/Waveform.vwf
+source_file = 1, C:/Users/user/Desktop/code/Digital_Systems/Lab1/db/Lab1_1_1.cbx.xml
+source_file = 1, C:/Users/user/Desktop/code/Digital_Systems/Lab1/lab1_1.bdf
 source_file = 1, c:/altera/13.1/quartus/libraries/others/maxplus2/xor3.bdf
 design_name = Lab1_1_1
 instance = comp, \S~output , S~output, Lab1_1_1, 1
