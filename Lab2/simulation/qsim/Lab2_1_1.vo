@@ -16,7 +16,7 @@
 // PROGRAM "Quartus II 64-Bit"
 // VERSION "Version 13.1.0 Build 162 10/23/2013 SJ Web Edition"
 
-// DATE "02/29/2024 15:39:28"
+// DATE "03/07/2024 16:48:26"
 
 // 
 // Device: Altera EP3C16F484C6 Package FBGA484
@@ -28,7 +28,7 @@
 
 `timescale 1 ps/ 1 ps
 
-module Lab2_1_1 (
+module Lab2_2 (
 	switch,
 	sevensegement,
 	prime);
