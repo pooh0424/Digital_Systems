@@ -1,0 +1,16 @@
+library ieee;
+use ieee.std_logic_1164.all;
+entity Lab4_1 is
+	port (
+		SW: in std_logic_vector(4 downto 0);
+		HEX0: out std_logic_vector(0 to 6)
+		HEX1: out std_logic_vector(0 to 6)
+	);
+end  Lab4_1;
+architecture behavor of Lab4_1 is
+begin
+	with SW select
+		HEX0 <= "1000010" HEX1<="1000000" when "0000",
+		"0110000""0000000"when "0001",
+		
+end behavor ;  
