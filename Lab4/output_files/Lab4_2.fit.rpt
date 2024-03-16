@@ -1,5 +1,5 @@
 Fitter report for Lab4_2
-Wed Mar 13 22:54:10 2024
+Thu Mar 14 16:59:13 2024
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -68,7 +68,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Fitter Summary                                                                  ;
 +------------------------------------+--------------------------------------------+
-; Fitter Status                      ; Successful - Wed Mar 13 22:54:10 2024      ;
+; Fitter Status                      ; Successful - Thu Mar 14 16:59:13 2024      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; Lab4_2                                     ;
 ; Top-level Entity Name              ; Lab4_2                                     ;
@@ -251,7 +251,6 @@ applicable agreement for further details.
 ; Location ;                ;              ; FL_ADDR[19]    ; PIN_P1        ; QSF Assignment ;
 ; Location ;                ;              ; FL_ADDR[1]     ; PIN_P5        ; QSF Assignment ;
 ; Location ;                ;              ; FL_ADDR[20]    ; PIN_P3        ; QSF Assignment ;
-; Location ;                ;              ; FL_ADDR[21]    ; PIN_R2        ; QSF Assignment ;
 ; Location ;                ;              ; FL_ADDR[2]     ; PIN_P6        ; QSF Assignment ;
 ; Location ;                ;              ; FL_ADDR[3]     ; PIN_N7        ; QSF Assignment ;
 ; Location ;                ;              ; FL_ADDR[4]     ; PIN_N5        ; QSF Assignment ;
@@ -355,8 +354,6 @@ applicable agreement for further details.
 ; Location ;                ;              ; GPIO_CLKOUT_N1 ; PIN_R16       ; QSF Assignment ;
 ; Location ;                ;              ; GPIO_CLKOUT_P0 ; PIN_AA3       ; QSF Assignment ;
 ; Location ;                ;              ; GPIO_CLKOUT_P1 ; PIN_T16       ; QSF Assignment ;
-; Location ;                ;              ; HEX0[7]        ; PIN_D13       ; QSF Assignment ;
-; Location ;                ;              ; HEX1[7]        ; PIN_B15       ; QSF Assignment ;
 ; Location ;                ;              ; HEX2[0]        ; PIN_D15       ; QSF Assignment ;
 ; Location ;                ;              ; HEX2[1]        ; PIN_A16       ; QSF Assignment ;
 ; Location ;                ;              ; HEX2[2]        ; PIN_B16       ; QSF Assignment ;
@@ -373,7 +370,6 @@ applicable agreement for further details.
 ; Location ;                ;              ; HEX3[5]        ; PIN_D19       ; QSF Assignment ;
 ; Location ;                ;              ; HEX3[6]        ; PIN_G15       ; QSF Assignment ;
 ; Location ;                ;              ; HEX3[7]        ; PIN_G16       ; QSF Assignment ;
-; Location ;                ;              ; KEY[2]         ; PIN_F1        ; QSF Assignment ;
 ; Location ;                ;              ; LCD_BLON       ; PIN_F21       ; QSF Assignment ;
 ; Location ;                ;              ; LCD_DATA[0]    ; PIN_D22       ; QSF Assignment ;
 ; Location ;                ;              ; LCD_DATA[1]    ; PIN_D21       ; QSF Assignment ;
@@ -386,12 +382,6 @@ applicable agreement for further details.
 ; Location ;                ;              ; LCD_EN         ; PIN_E21       ; QSF Assignment ;
 ; Location ;                ;              ; LCD_RS         ; PIN_F22       ; QSF Assignment ;
 ; Location ;                ;              ; LCD_RW         ; PIN_E22       ; QSF Assignment ;
-; Location ;                ;              ; LEDG[4]        ; PIN_F2        ; QSF Assignment ;
-; Location ;                ;              ; LEDG[5]        ; PIN_E1        ; QSF Assignment ;
-; Location ;                ;              ; LEDG[6]        ; PIN_C1        ; QSF Assignment ;
-; Location ;                ;              ; LEDG[7]        ; PIN_C2        ; QSF Assignment ;
-; Location ;                ;              ; LEDG[8]        ; PIN_B2        ; QSF Assignment ;
-; Location ;                ;              ; LEDG[9]        ; PIN_B1        ; QSF Assignment ;
 ; Location ;                ;              ; PS2_KBCLK      ; PIN_P22       ; QSF Assignment ;
 ; Location ;                ;              ; PS2_KBDAT      ; PIN_P21       ; QSF Assignment ;
 ; Location ;                ;              ; PS2_MSCLK      ; PIN_R21       ; QSF Assignment ;
@@ -401,10 +391,6 @@ applicable agreement for further details.
 ; Location ;                ;              ; SD_DAT0        ; PIN_AA22      ; QSF Assignment ;
 ; Location ;                ;              ; SD_DAT3        ; PIN_W21       ; QSF Assignment ;
 ; Location ;                ;              ; SD_WP_N        ; PIN_W20       ; QSF Assignment ;
-; Location ;                ;              ; SW[6]          ; PIN_H7        ; QSF Assignment ;
-; Location ;                ;              ; SW[7]          ; PIN_E3        ; QSF Assignment ;
-; Location ;                ;              ; SW[8]          ; PIN_E4        ; QSF Assignment ;
-; Location ;                ;              ; SW[9]          ; PIN_D2        ; QSF Assignment ;
 ; Location ;                ;              ; UART_CTS       ; PIN_V21       ; QSF Assignment ;
 ; Location ;                ;              ; UART_RTS       ; PIN_V22       ; QSF Assignment ;
 ; Location ;                ;              ; UART_RXD       ; PIN_U22       ; QSF Assignment ;
@@ -1704,7 +1690,6 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "FL_ADDR[19]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "FL_ADDR[1]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "FL_ADDR[20]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "FL_ADDR[21]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "FL_ADDR[2]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "FL_ADDR[3]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "FL_ADDR[4]" is assigned to location or region, but does not exist in design
@@ -1808,8 +1793,6 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "GPIO_CLKOUT_N1" is assigned to location or region, but does not exist in design
     Warning (15706): Node "GPIO_CLKOUT_P0" is assigned to location or region, but does not exist in design
     Warning (15706): Node "GPIO_CLKOUT_P1" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "HEX0[7]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "HEX1[7]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "HEX2[0]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "HEX2[1]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "HEX2[2]" is assigned to location or region, but does not exist in design
@@ -1826,7 +1809,6 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "HEX3[5]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "HEX3[6]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "HEX3[7]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "KEY[2]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "LCD_BLON" is assigned to location or region, but does not exist in design
     Warning (15706): Node "LCD_DATA[0]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "LCD_DATA[1]" is assigned to location or region, but does not exist in design
@@ -1839,12 +1821,6 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "LCD_EN" is assigned to location or region, but does not exist in design
     Warning (15706): Node "LCD_RS" is assigned to location or region, but does not exist in design
     Warning (15706): Node "LCD_RW" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "LEDG[4]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "LEDG[5]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "LEDG[6]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "LEDG[7]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "LEDG[8]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "LEDG[9]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "PS2_KBCLK" is assigned to location or region, but does not exist in design
     Warning (15706): Node "PS2_KBDAT" is assigned to location or region, but does not exist in design
     Warning (15706): Node "PS2_MSCLK" is assigned to location or region, but does not exist in design
@@ -1854,10 +1830,6 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "SD_DAT0" is assigned to location or region, but does not exist in design
     Warning (15706): Node "SD_DAT3" is assigned to location or region, but does not exist in design
     Warning (15706): Node "SD_WP_N" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "SW[6]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "SW[7]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "SW[8]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "SW[9]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "UART_CTS" is assigned to location or region, but does not exist in design
     Warning (15706): Node "UART_RTS" is assigned to location or region, but does not exist in design
     Warning (15706): Node "UART_RXD" is assigned to location or region, but does not exist in design
@@ -1889,18 +1861,18 @@ Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.09 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.03 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:02
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file D:/Users/USER/Desktop/code/Digital_Systems/Lab4/output_files/Lab4_2.fit.smsg
-Info: Quartus II 64-Bit Fitter was successful. 0 errors, 232 warnings
-    Info: Peak virtual memory: 5344 megabytes
-    Info: Processing ended: Wed Mar 13 22:54:11 2024
-    Info: Elapsed time: 00:00:06
+Info: Quartus II 64-Bit Fitter was successful. 0 errors, 218 warnings
+    Info: Peak virtual memory: 5334 megabytes
+    Info: Processing ended: Thu Mar 14 16:59:13 2024
+    Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:03
 
 

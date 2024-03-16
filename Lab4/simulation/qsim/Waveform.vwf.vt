@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "03/13/2024 22:59:42"
+// Generated on "03/14/2024 16:59:47"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    Lab4_2
 // 
@@ -118,110 +118,92 @@ begin
 end
 
 
-
-// expected HEX0[0]
-initial
-begin
-	HEX0_expected[0] = 1'bX;
-end 
-
-// expected HEX0[1]
-initial
-begin
-	HEX0_expected[1] = 1'bX;
-end 
-
-// expected HEX0[2]
-initial
-begin
-	HEX0_expected[2] = 1'bX;
-end 
-
-// expected HEX0[3]
-initial
-begin
-	HEX0_expected[3] = 1'bX;
-end 
-
-// expected HEX0[4]
-initial
-begin
-	HEX0_expected[4] = 1'bX;
-end 
-
-// expected HEX0[5]
-initial
-begin
-	HEX0_expected[5] = 1'bX;
-end 
-
-// expected HEX0[6]
+// expected HEX0[ 6 ]
 initial
 begin
 	HEX0_expected[6] = 1'bX;
 end 
-
-// expected HEX1[0]
+// expected HEX0[ 5 ]
 initial
 begin
-	HEX1_expected[0] = 1'bX;
+	HEX0_expected[5] = 1'bX;
 end 
-
-// expected HEX1[1]
+// expected HEX0[ 4 ]
 initial
 begin
-	HEX1_expected[1] = 1'bX;
+	HEX0_expected[4] = 1'bX;
 end 
-
-// expected HEX1[2]
+// expected HEX0[ 3 ]
 initial
 begin
-	HEX1_expected[2] = 1'bX;
+	HEX0_expected[3] = 1'bX;
 end 
-
-// expected HEX1[3]
+// expected HEX0[ 2 ]
 initial
 begin
-	HEX1_expected[3] = 1'bX;
+	HEX0_expected[2] = 1'bX;
 end 
-
-// expected HEX1[4]
+// expected HEX0[ 1 ]
 initial
 begin
-	HEX1_expected[4] = 1'bX;
+	HEX0_expected[1] = 1'bX;
 end 
-
-// expected HEX1[5]
+// expected HEX0[ 0 ]
 initial
 begin
-	HEX1_expected[5] = 1'bX;
+	HEX0_expected[0] = 1'bX;
 end 
-
-// expected HEX1[6]
+// expected HEX1[ 6 ]
 initial
 begin
 	HEX1_expected[6] = 1'bX;
 end 
-
-// expected LEDG[3]
+// expected HEX1[ 5 ]
+initial
+begin
+	HEX1_expected[5] = 1'bX;
+end 
+// expected HEX1[ 4 ]
+initial
+begin
+	HEX1_expected[4] = 1'bX;
+end 
+// expected HEX1[ 3 ]
+initial
+begin
+	HEX1_expected[3] = 1'bX;
+end 
+// expected HEX1[ 2 ]
+initial
+begin
+	HEX1_expected[2] = 1'bX;
+end 
+// expected HEX1[ 1 ]
+initial
+begin
+	HEX1_expected[1] = 1'bX;
+end 
+// expected HEX1[ 0 ]
+initial
+begin
+	HEX1_expected[0] = 1'bX;
+end 
+// expected LEDG[ 3 ]
 initial
 begin
 	LEDG_expected[3] = 1'bX;
 end 
-
-// expected LEDG[2]
+// expected LEDG[ 2 ]
 initial
 begin
 	LEDG_expected[2] = 1'bX;
 end 
-
-// expected LEDG[1]
+// expected LEDG[ 1 ]
 initial
 begin
 	LEDG_expected[1] = 1'bX;
 end 
-
-// expected LEDG[0]
+// expected LEDG[ 0 ]
 initial
 begin
 	LEDG_expected[0] = 1'bX;
@@ -486,7 +468,7 @@ if (nummismatches > 0)
 	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
 else
 	$display ("Simulation passed !");
-$stop;
+$finish;
 end 
 endmodule
 
@@ -511,24 +493,21 @@ Lab4_2 i1 (
 	.LEDG(LEDG),
 	.SW(SW)
 );
-
-// KEY[1]
+// KEY[ 1 ]
 always
 begin
 	KEY[1] = 1'b0;
 	KEY[1] = #5000 1'b1;
 	#5000;
 end 
-
-// KEY[0]
+// KEY[ 0 ]
 always
 begin
 	KEY[0] = 1'b0;
 	KEY[0] = #2500 1'b1;
 	#2500;
 end 
-
-// SW[5]
+// SW[ 5 ]
 initial
 begin
 	SW[5] = 1'b0;
@@ -536,8 +515,7 @@ begin
 	SW[5] = #320000 1'b0;
 	SW[5] = #320000 1'b1;
 end 
-
-// SW[4]
+// SW[ 4 ]
 initial
 begin
 	repeat(3)
@@ -548,8 +526,7 @@ begin
 	end
 	SW[4] = 1'b0;
 end 
-
-// SW[3]
+// SW[ 3 ]
 initial
 begin
 	repeat(6)
@@ -560,8 +537,7 @@ begin
 	end
 	SW[3] = 1'b0;
 end 
-
-// SW[2]
+// SW[ 2 ]
 initial
 begin
 	repeat(12)
@@ -572,16 +548,14 @@ begin
 	end
 	SW[2] = 1'b0;
 end 
-
-// SW[1]
+// SW[ 1 ]
 always
 begin
 	SW[1] = 1'b0;
 	SW[1] = #20000 1'b1;
 	#20000;
 end 
-
-// SW[0]
+// SW[ 0 ]
 always
 begin
 	SW[0] = 1'b0;

@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus II 64-Bit"
 -- VERSION "Version 13.1.0 Build 162 10/23/2013 SJ Web Edition"
 
--- DATE "03/13/2024 22:54:31"
+-- DATE "03/14/2024 16:59:19"
 
 -- 
 -- Device: Altera EP3C16F484C6 Package FBGA484
@@ -35,9 +35,9 @@ ENTITY 	Lab4_2 IS
     PORT (
 	SW : IN std_logic_vector(5 DOWNTO 0);
 	KEY : IN std_logic_vector(1 DOWNTO 0);
-	HEX0 : OUT std_logic_vector(0 TO 6);
-	HEX1 : OUT std_logic_vector(0 TO 6);
-	LEDG : OUT std_logic_vector(3 DOWNTO 0)
+	HEX0 : BUFFER std_logic_vector(0 TO 6);
+	HEX1 : BUFFER std_logic_vector(0 TO 6);
+	LEDG : BUFFER std_logic_vector(3 DOWNTO 0)
 	);
 END Lab4_2;
 
