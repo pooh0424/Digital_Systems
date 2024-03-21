@@ -31,7 +31,4 @@ begin
 				WHEN OTHERS =>HEX0<="0000001" ;HEX1<="0000001";
 			END CASE;
 		END PROCESS;
-	
-		
-		
 end behavor ;  

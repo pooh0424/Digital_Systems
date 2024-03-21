@@ -1,5 +1,5 @@
 Fitter report for Lab4_1
-Wed Mar 13 22:21:05 2024
+Thu Mar 14 16:53:18 2024
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Fitter Summary                                                                  ;
 +------------------------------------+--------------------------------------------+
-; Fitter Status                      ; Successful - Wed Mar 13 22:21:05 2024      ;
+; Fitter Status                      ; Successful - Thu Mar 14 16:53:18 2024      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; Lab4_1                                     ;
 ; Top-level Entity Name              ; Lab4_1                                     ;
@@ -152,12 +152,12 @@ applicable agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 2.50        ;
+; Average used               ; 1.00        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;  50.0%      ;
+;     Processors 2-4         ; < 0.1%      ;
 ;     Processors 5-8         ;   0.0%      ;
 +----------------------------+-------------+
 
@@ -347,8 +347,6 @@ applicable agreement for further details.
 ; Location ;                ;              ; GPIO_CLKOUT_N1 ; PIN_R16       ; QSF Assignment ;
 ; Location ;                ;              ; GPIO_CLKOUT_P0 ; PIN_AA3       ; QSF Assignment ;
 ; Location ;                ;              ; GPIO_CLKOUT_P1 ; PIN_T16       ; QSF Assignment ;
-; Location ;                ;              ; HEX0[7]        ; PIN_D13       ; QSF Assignment ;
-; Location ;                ;              ; HEX1[7]        ; PIN_B15       ; QSF Assignment ;
 ; Location ;                ;              ; HEX2[0]        ; PIN_D15       ; QSF Assignment ;
 ; Location ;                ;              ; HEX2[1]        ; PIN_A16       ; QSF Assignment ;
 ; Location ;                ;              ; HEX2[2]        ; PIN_B16       ; QSF Assignment ;
@@ -367,7 +365,6 @@ applicable agreement for further details.
 ; Location ;                ;              ; HEX3[7]        ; PIN_G16       ; QSF Assignment ;
 ; Location ;                ;              ; KEY[0]         ; PIN_H2        ; QSF Assignment ;
 ; Location ;                ;              ; KEY[1]         ; PIN_G3        ; QSF Assignment ;
-; Location ;                ;              ; KEY[2]         ; PIN_F1        ; QSF Assignment ;
 ; Location ;                ;              ; LCD_BLON       ; PIN_F21       ; QSF Assignment ;
 ; Location ;                ;              ; LCD_DATA[0]    ; PIN_D22       ; QSF Assignment ;
 ; Location ;                ;              ; LCD_DATA[1]    ; PIN_D21       ; QSF Assignment ;
@@ -399,12 +396,6 @@ applicable agreement for further details.
 ; Location ;                ;              ; SD_DAT0        ; PIN_AA22      ; QSF Assignment ;
 ; Location ;                ;              ; SD_DAT3        ; PIN_W21       ; QSF Assignment ;
 ; Location ;                ;              ; SD_WP_N        ; PIN_W20       ; QSF Assignment ;
-; Location ;                ;              ; SW[4]          ; PIN_G5        ; QSF Assignment ;
-; Location ;                ;              ; SW[5]          ; PIN_J7        ; QSF Assignment ;
-; Location ;                ;              ; SW[6]          ; PIN_H7        ; QSF Assignment ;
-; Location ;                ;              ; SW[7]          ; PIN_E3        ; QSF Assignment ;
-; Location ;                ;              ; SW[8]          ; PIN_E4        ; QSF Assignment ;
-; Location ;                ;              ; SW[9]          ; PIN_D2        ; QSF Assignment ;
 ; Location ;                ;              ; UART_CTS       ; PIN_V21       ; QSF Assignment ;
 ; Location ;                ;              ; UART_RTS       ; PIN_V22       ; QSF Assignment ;
 ; Location ;                ;              ; UART_RXD       ; PIN_U22       ; QSF Assignment ;
@@ -1655,8 +1646,6 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "GPIO_CLKOUT_N1" is assigned to location or region, but does not exist in design
     Warning (15706): Node "GPIO_CLKOUT_P0" is assigned to location or region, but does not exist in design
     Warning (15706): Node "GPIO_CLKOUT_P1" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "HEX0[7]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "HEX1[7]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "HEX2[0]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "HEX2[1]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "HEX2[2]" is assigned to location or region, but does not exist in design
@@ -1675,7 +1664,6 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "HEX3[7]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "KEY[0]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "KEY[1]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "KEY[2]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "LCD_BLON" is assigned to location or region, but does not exist in design
     Warning (15706): Node "LCD_DATA[0]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "LCD_DATA[1]" is assigned to location or region, but does not exist in design
@@ -1707,12 +1695,6 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "SD_DAT0" is assigned to location or region, but does not exist in design
     Warning (15706): Node "SD_DAT3" is assigned to location or region, but does not exist in design
     Warning (15706): Node "SD_WP_N" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "SW[4]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "SW[5]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "SW[6]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "SW[7]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "SW[8]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "SW[9]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "UART_CTS" is assigned to location or region, but does not exist in design
     Warning (15706): Node "UART_RTS" is assigned to location or region, but does not exist in design
     Warning (15706): Node "UART_RXD" is assigned to location or region, but does not exist in design
@@ -1752,10 +1734,10 @@ Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file D:/Users/USER/Desktop/code/Digital_Systems/Lab4/output_files/Lab4_1.fit.smsg
-Info: Quartus II 64-Bit Fitter was successful. 0 errors, 240 warnings
-    Info: Peak virtual memory: 5321 megabytes
-    Info: Processing ended: Wed Mar 13 22:21:05 2024
-    Info: Elapsed time: 00:00:06
+Info: Quartus II 64-Bit Fitter was successful. 0 errors, 231 warnings
+    Info: Peak virtual memory: 5331 megabytes
+    Info: Processing ended: Thu Mar 14 16:53:18 2024
+    Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:03
 
 

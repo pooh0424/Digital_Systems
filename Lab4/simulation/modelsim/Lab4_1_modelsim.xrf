@@ -1,5 +1,6 @@
 vendor_name = ModelSim
 source_file = 1, D:/Users/USER/Desktop/code/Digital_Systems/Lab4/Lab4_1.vhd
+source_file = 1, D:/Users/USER/Desktop/code/Digital_Systems/Lab4/output_files/Waveform1.vwf
 source_file = 1, D:/Users/USER/Desktop/code/Digital_Systems/Lab4/db/Lab4_1.cbx.xml
 source_file = 1, c:/altera/13.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
 source_file = 1, c:/altera/13.1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
