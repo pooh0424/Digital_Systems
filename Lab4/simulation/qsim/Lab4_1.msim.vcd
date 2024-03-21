@@ -3,7 +3,11 @@ $comment
 		vcd file Lab4_1.msim.vcd -direction
 $end
 $date
+<<<<<<< HEAD
 	Sat Mar 16 21:29:51 2024
+=======
+	Thu Mar 14 16:53:32 2024
+>>>>>>> 683fc690805473bc321843b3c00280e6577199a2
 $end
 $version
 	ModelSim Version 10.1d
