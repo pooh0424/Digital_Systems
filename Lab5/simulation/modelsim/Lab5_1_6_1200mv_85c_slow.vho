@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus II 64-Bit"
 -- VERSION "Version 13.1.0 Build 162 10/23/2013 SJ Web Edition"
 
--- DATE "03/21/2024 15:45:12"
+-- DATE "03/22/2024 18:44:55"
 
 -- 
 -- Device: Altera EP3C16F484C6 Package FBGA484
@@ -830,10 +830,10 @@ SIGNAL \Digit1|WideOr2~2_combout\ : std_logic;
 SIGNAL \Digit1|WideOr1~combout\ : std_logic;
 SIGNAL \Digit1|WideOr0~0_combout\ : std_logic;
 SIGNAL \Digit1|HEX\ : std_logic_vector(0 TO 6);
-SIGNAL \Mult0|auto_generated|le2a\ : std_logic_vector(4 DOWNTO 0);
 SIGNAL \Mult0|auto_generated|le5a\ : std_logic_vector(4 DOWNTO 0);
 SIGNAL \Mult0|auto_generated|le4a\ : std_logic_vector(4 DOWNTO 0);
 SIGNAL \Digit0|HEX\ : std_logic_vector(0 TO 6);
+SIGNAL \Mult0|auto_generated|le2a\ : std_logic_vector(4 DOWNTO 0);
 SIGNAL \Digit1|ALT_INV_WideOr0~0_combout\ : std_logic;
 SIGNAL \Digit1|ALT_INV_WideOr3~combout\ : std_logic;
 

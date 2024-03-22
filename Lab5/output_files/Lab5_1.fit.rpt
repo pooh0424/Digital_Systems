@@ -1,5 +1,5 @@
 Fitter report for Lab5_1
-Thu Mar 21 15:45:06 2024
+Fri Mar 22 18:44:48 2024
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Fitter Summary                                                                  ;
 +------------------------------------+--------------------------------------------+
-; Fitter Status                      ; Successful - Thu Mar 21 15:45:06 2024      ;
+; Fitter Status                      ; Successful - Fri Mar 22 18:44:48 2024      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; Lab5_1                                     ;
 ; Top-level Entity Name              ; Lab5_1                                     ;
@@ -144,22 +144,15 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+---------------------------------------+---------------------------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ; < 0.1%      ;
-;     Processors 5-8         ;   0.0%      ;
-+----------------------------+-------------+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
 
 
 +-------------------------------------------------+
@@ -348,15 +341,12 @@ applicable agreement for further details.
 ; Location ;                ;              ; GPIO_CLKOUT_N1 ; PIN_R16       ; QSF Assignment ;
 ; Location ;                ;              ; GPIO_CLKOUT_P0 ; PIN_AA3       ; QSF Assignment ;
 ; Location ;                ;              ; GPIO_CLKOUT_P1 ; PIN_T16       ; QSF Assignment ;
-; Location ;                ;              ; HEX0[7]        ; PIN_D13       ; QSF Assignment ;
-; Location ;                ;              ; HEX1[7]        ; PIN_B15       ; QSF Assignment ;
 ; Location ;                ;              ; HEX2[0]        ; PIN_D15       ; QSF Assignment ;
 ; Location ;                ;              ; HEX2[1]        ; PIN_A16       ; QSF Assignment ;
 ; Location ;                ;              ; HEX2[2]        ; PIN_B16       ; QSF Assignment ;
 ; Location ;                ;              ; HEX2[3]        ; PIN_E15       ; QSF Assignment ;
 ; Location ;                ;              ; HEX2[4]        ; PIN_A17       ; QSF Assignment ;
 ; Location ;                ;              ; HEX2[5]        ; PIN_B17       ; QSF Assignment ;
-; Location ;                ;              ; HEX2[6]        ; PIN_F14       ; QSF Assignment ;
 ; Location ;                ;              ; HEX2[7]        ; PIN_A18       ; QSF Assignment ;
 ; Location ;                ;              ; HEX3[0]        ; PIN_B18       ; QSF Assignment ;
 ; Location ;                ;              ; HEX3[1]        ; PIN_F15       ; QSF Assignment ;
@@ -378,15 +368,6 @@ applicable agreement for further details.
 ; Location ;                ;              ; LCD_EN         ; PIN_E21       ; QSF Assignment ;
 ; Location ;                ;              ; LCD_RS         ; PIN_F22       ; QSF Assignment ;
 ; Location ;                ;              ; LCD_RW         ; PIN_E22       ; QSF Assignment ;
-; Location ;                ;              ; LEDG[0]        ; PIN_J1        ; QSF Assignment ;
-; Location ;                ;              ; LEDG[1]        ; PIN_J2        ; QSF Assignment ;
-; Location ;                ;              ; LEDG[2]        ; PIN_J3        ; QSF Assignment ;
-; Location ;                ;              ; LEDG[3]        ; PIN_H1        ; QSF Assignment ;
-; Location ;                ;              ; LEDG[4]        ; PIN_F2        ; QSF Assignment ;
-; Location ;                ;              ; LEDG[5]        ; PIN_E1        ; QSF Assignment ;
-; Location ;                ;              ; LEDG[6]        ; PIN_C1        ; QSF Assignment ;
-; Location ;                ;              ; LEDG[7]        ; PIN_C2        ; QSF Assignment ;
-; Location ;                ;              ; LEDG[8]        ; PIN_B2        ; QSF Assignment ;
 ; Location ;                ;              ; PS2_KBCLK      ; PIN_P22       ; QSF Assignment ;
 ; Location ;                ;              ; PS2_KBDAT      ; PIN_P21       ; QSF Assignment ;
 ; Location ;                ;              ; PS2_MSCLK      ; PIN_R21       ; QSF Assignment ;
@@ -396,8 +377,6 @@ applicable agreement for further details.
 ; Location ;                ;              ; SD_DAT0        ; PIN_AA22      ; QSF Assignment ;
 ; Location ;                ;              ; SD_DAT3        ; PIN_W21       ; QSF Assignment ;
 ; Location ;                ;              ; SD_WP_N        ; PIN_W20       ; QSF Assignment ;
-; Location ;                ;              ; SW[8]          ; PIN_E4        ; QSF Assignment ;
-; Location ;                ;              ; SW[9]          ; PIN_D2        ; QSF Assignment ;
 ; Location ;                ;              ; UART_CTS       ; PIN_V21       ; QSF Assignment ;
 ; Location ;                ;              ; UART_RTS       ; PIN_V22       ; QSF Assignment ;
 ; Location ;                ;              ; UART_RXD       ; PIN_U22       ; QSF Assignment ;
@@ -457,7 +436,7 @@ applicable agreement for further details.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in D:/Users/USER/Desktop/code/Digital_Systems/Lab5/output_files/Lab5_1.pin.
+The pin-out file can be found in C:/Users/USER/Desktop/code/Digital_Systems/Lab5/output_files/Lab5_1.pin.
 
 
 +--------------------------------------------------------------------+
@@ -2347,7 +2326,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+
 ; Fitter Messages ;
 +-----------------+
-Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
+Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (119006): Selected device EP3C16F484C6 for design "Lab5_1"
 Info (21077): Core supply voltage is 1.2V
 Info (21077): Low junction temperature is 0 degrees C
@@ -2533,15 +2512,12 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "GPIO_CLKOUT_N1" is assigned to location or region, but does not exist in design
     Warning (15706): Node "GPIO_CLKOUT_P0" is assigned to location or region, but does not exist in design
     Warning (15706): Node "GPIO_CLKOUT_P1" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "HEX0[7]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "HEX1[7]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "HEX2[0]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "HEX2[1]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "HEX2[2]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "HEX2[3]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "HEX2[4]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "HEX2[5]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "HEX2[6]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "HEX2[7]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "HEX3[0]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "HEX3[1]" is assigned to location or region, but does not exist in design
@@ -2563,15 +2539,6 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "LCD_EN" is assigned to location or region, but does not exist in design
     Warning (15706): Node "LCD_RS" is assigned to location or region, but does not exist in design
     Warning (15706): Node "LCD_RW" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "LEDG[0]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "LEDG[1]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "LEDG[2]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "LEDG[3]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "LEDG[4]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "LEDG[5]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "LEDG[6]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "LEDG[7]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "LEDG[8]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "PS2_KBCLK" is assigned to location or region, but does not exist in design
     Warning (15706): Node "PS2_KBDAT" is assigned to location or region, but does not exist in design
     Warning (15706): Node "PS2_MSCLK" is assigned to location or region, but does not exist in design
@@ -2581,8 +2548,6 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "SD_DAT0" is assigned to location or region, but does not exist in design
     Warning (15706): Node "SD_DAT3" is assigned to location or region, but does not exist in design
     Warning (15706): Node "SD_WP_N" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "SW[8]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "SW[9]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "UART_CTS" is assigned to location or region, but does not exist in design
     Warning (15706): Node "UART_RTS" is assigned to location or region, but does not exist in design
     Warning (15706): Node "UART_RXD" is assigned to location or region, but does not exist in design
@@ -2614,24 +2579,24 @@ Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.05 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.06 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
-Info (144001): Generated suppressed messages file D:/Users/USER/Desktop/code/Digital_Systems/Lab5/output_files/Lab5_1.fit.smsg
-Info: Quartus II 64-Bit Fitter was successful. 0 errors, 232 warnings
-    Info: Peak virtual memory: 5340 megabytes
-    Info: Processing ended: Thu Mar 21 15:45:06 2024
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:03
+Info (144001): Generated suppressed messages file C:/Users/USER/Desktop/code/Digital_Systems/Lab5/output_files/Lab5_1.fit.smsg
+Info: Quartus II 64-Bit Fitter was successful. 0 errors, 219 warnings
+    Info: Peak virtual memory: 4956 megabytes
+    Info: Processing ended: Fri Mar 22 18:44:48 2024
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:04
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in D:/Users/USER/Desktop/code/Digital_Systems/Lab5/output_files/Lab5_1.fit.smsg.
+The suppressed messages can be found in C:/Users/USER/Desktop/code/Digital_Systems/Lab5/output_files/Lab5_1.fit.smsg.
 
 
