@@ -1,0 +1,44 @@
+|pil8
+KEY[1] => count[0].ACLR
+KEY[1] => count[1].ACLR
+KEY[1] => count[2].ACLR
+KEY[1] => count[3].ACLR
+LEDG[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+LEDG[1] <= count[2].DB_MAX_OUTPUT_PORT_TYPE
+LEDG[2] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+LEDG[3] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+LEDG[4] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+LEDG[5] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+LEDG[6] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+LEDG[7] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+CLOCK_50 => CLK_DIV:myclock.clock_50Mhz
+
+
+|pil8|CLK_DIV:myclock
+clock_50Mhz => CLK_5hz.CLK
+clock_50Mhz => count_5hz[0].CLK
+clock_50Mhz => count_5hz[1].CLK
+clock_50Mhz => count_5hz[2].CLK
+clock_50Mhz => count_5hz[3].CLK
+clock_50Mhz => count_5hz[4].CLK
+clock_50Mhz => count_5hz[5].CLK
+clock_50Mhz => count_5hz[6].CLK
+clock_50Mhz => count_5hz[7].CLK
+clock_50Mhz => count_5hz[8].CLK
+clock_50Mhz => count_5hz[9].CLK
+clock_50Mhz => count_5hz[10].CLK
+clock_50Mhz => count_5hz[11].CLK
+clock_50Mhz => count_5hz[12].CLK
+clock_50Mhz => count_5hz[13].CLK
+clock_50Mhz => count_5hz[14].CLK
+clock_50Mhz => count_5hz[15].CLK
+clock_50Mhz => count_5hz[16].CLK
+clock_50Mhz => count_5hz[17].CLK
+clock_50Mhz => count_5hz[18].CLK
+clock_50Mhz => count_5hz[19].CLK
+clock_50Mhz => count_5hz[20].CLK
+clock_50Mhz => count_5hz[21].CLK
+clock_50Mhz => count_5hz[22].CLK
+clock_5Hz <= CLK_5hz.DB_MAX_OUTPUT_PORT_TYPE
+
+

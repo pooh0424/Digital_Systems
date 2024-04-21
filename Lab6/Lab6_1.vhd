@@ -27,7 +27,7 @@ begin
 	BEGIN
 		IF (clock'EVENT and clock='1')THEN
 			temp1 <= temp1 +1;
-			IF (temp1=9)THEN
+			IF (temp1=10)THEN
 				temp1<=0;
 			END IF;
 		END IF;

@@ -1,0 +1,123 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+entity counter is
+	port (
+		KEY: in std_logic_vector(1 downto 1);
+		SW : in std_logic_vector(1 downto 0);
+		CLOck_50_2: in std_LOGIC;
+		HEX2:out std_logic_vector(0 to 6);
+		HEX3:out std_logic_vector(0 to 6)
+	);
+end  counter;
+architecture behavor of counter is
+	component CLK_DIV
+		PORT( 
+			clock_50Mhz	: IN	STD_LOGIC;
+			clock_5Hz	: OUT	STD_LOGIC
+
+		);
+	end component;
+	component Intto7seg
+	PORT( 
+		number: in Integer;
+		HEX: out std_logic_vector(0 to 6)
+	);
+	end component;
+	signal digit1:Integer;
+	signal digit2:integer;
+	signal clock:std_logic;
+	signal reset:std_logic;
+	signal sl:std_logic;
+begin
+	reset <= KEY(1);
+	sl <= sw(0);
+	PROCESS(clock)
+		VARIABLE temp:Integer RANGE -1 to 100;
+	BEGIN
+		IF (clock'EVENT and clock='1' and SW(1)='1')THEN
+			IF(sl='0') theN
+				temp := temp+1;
+				IF(temp=100)THEN
+					temp:=0;
+				END IF;
+			ELSE
+				temp := temp-1;
+				IF(temp=-1)THEN
+					temp:=99;
+				END IF;
+			END IF;	
+		END IF;
+		IF(reset='0')THEN
+			temp:=0;
+		END IF;
+		digit1<=temp mod 10;
+		digit2<=temp/10;
+	END PROCESS;
+	myclock:CLK_DIV PORT MAP(clock_50_2,clock);
+	digit1display:intto7seg PORT MAP(digit1,HEX2);
+	digit2display:intto7seg PORT MAP(digit2,HEX3);
+end behavor ;
+
+
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+entity CLK_DIV is
+	port 
+	(	
+		clock_50Mhz				: IN	STD_LOGIC;
+		clock_5Hz				: OUT	STD_LOGIC
+		);
+end CLK_DIV;
+
+architecture arch of CLK_DIV is
+	constant divisor: integer := 10000000;
+	signal count_5hz: integer range 0 to 5000000 := 0;
+	signal CLK_5hz:std_LOGIC;
+begin
+	clock_5Hz <= CLK_5hz;
+	process(clock_50Mhz)
+	begin
+		IF clock_50Mhz'event and clock_50Mhz='1' THEN
+			IF count_5hz <  divisor/2 THEN
+				count_5hz <= count_5hz + 1;
+			ELSE
+				count_5hz <= 0;
+				CLK_5hz <= NOT CLK_5hz;
+			END IF;
+		END IF;
+	end process;
+end arch;
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+ENTITY Intto7seg IS
+	PORT( 
+		number: in Integer;
+		HEX: out std_logic_vector(0 to 6)
+	);
+END Intto7seg;
+
+architecture Behavor OF Intto7seg IS
+begin
+	PROCESS(number)
+	Begin
+		CASE number IS
+			WHEN 1=>HEX<="1001111" ;
+			WHEN 2 =>HEX<="0010010" ;
+			WHEN 3 =>HEX<="0000110" ;
+			WHEN 4 =>HEX<="1001100" ;
+			WHEN 5 =>HEX<="0100100" ;
+			WHEN 6 =>HEX<="0100000" ;
+			WHEN 7 =>HEX<="0001111" ;
+			WHEN 8 =>HEX<="0000000" ;
+			WHEN 9 =>HEX<="0001100" ;
+			WHEN 0 =>HEX<="0000001" ;
+			WHEN 10 =>HEX<="0001000" ;
+			WHEN OTHERS =>HEX<="1111111";
+		END CASE;
+	end process;
+end Behavor;

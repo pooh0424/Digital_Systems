@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Lab6_1
-Thu Mar 28 16:30:23 2024
+Tue Apr 02 15:44:24 2024
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -13,12 +13,11 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Port Connectivity Checks: "Intto7seg:Digit3"
- 11. Port Connectivity Checks: "Intto7seg:Digit0"
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
+  8. General Register Statistics
+  9. Port Connectivity Checks: "Intto7seg:Digit3"
+ 10. Port Connectivity Checks: "Intto7seg:Digit0"
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -44,15 +43,15 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Mar 28 16:30:23 2024      ;
+; Analysis & Synthesis Status        ; Successful - Tue Apr 02 15:44:24 2024      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; Lab6_1                                     ;
 ; Top-level Entity Name              ; Lab6_1                                     ;
 ; Family                             ; Cyclone III                                ;
-; Total logic elements               ; 28                                         ;
-;     Total combinational functions  ; 28                                         ;
-;     Dedicated logic registers      ; 7                                          ;
-; Total registers                    ; 7                                          ;
+; Total logic elements               ; 29                                         ;
+;     Total combinational functions  ; 29                                         ;
+;     Dedicated logic registers      ; 8                                          ;
+; Total registers                    ; 8                                          ;
 ; Total pins                         ; 16                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
@@ -174,34 +173,34 @@ applicable agreement for further details.
 +----------------------------------+-----------------+-----------------+------------------------------------------------------------+---------+
 
 
-+--------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary            ;
-+---------------------------------------------+----------+
-; Resource                                    ; Usage    ;
-+---------------------------------------------+----------+
-; Estimated Total logic elements              ; 28       ;
-;                                             ;          ;
-; Total combinational functions               ; 28       ;
-; Logic element usage by number of LUT inputs ;          ;
-;     -- 4 input functions                    ; 18       ;
-;     -- 3 input functions                    ; 3        ;
-;     -- <=2 input functions                  ; 7        ;
-;                                             ;          ;
-; Logic elements by mode                      ;          ;
-;     -- normal mode                          ; 28       ;
-;     -- arithmetic mode                      ; 0        ;
-;                                             ;          ;
-; Total registers                             ; 7        ;
-;     -- Dedicated logic registers            ; 7        ;
-;     -- I/O registers                        ; 0        ;
-;                                             ;          ;
-; I/O pins                                    ; 16       ;
-; Embedded Multiplier 9-bit elements          ; 0        ;
-; Maximum fan-out node                        ; temp2[0] ;
-; Maximum fan-out                             ; 21       ;
-; Total fan-out                               ; 145      ;
-; Average fan-out                             ; 2.16     ;
-+---------------------------------------------+----------+
++------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                ;
++---------------------------------------------+--------------+
+; Resource                                    ; Usage        ;
++---------------------------------------------+--------------+
+; Estimated Total logic elements              ; 29           ;
+;                                             ;              ;
+; Total combinational functions               ; 29           ;
+; Logic element usage by number of LUT inputs ;              ;
+;     -- 4 input functions                    ; 19           ;
+;     -- 3 input functions                    ; 3            ;
+;     -- <=2 input functions                  ; 7            ;
+;                                             ;              ;
+; Logic elements by mode                      ;              ;
+;     -- normal mode                          ; 29           ;
+;     -- arithmetic mode                      ; 0            ;
+;                                             ;              ;
+; Total registers                             ; 8            ;
+;     -- Dedicated logic registers            ; 8            ;
+;     -- I/O registers                        ; 0            ;
+;                                             ;              ;
+; I/O pins                                    ; 16           ;
+; Embedded Multiplier 9-bit elements          ; 0            ;
+; Maximum fan-out node                        ; KEY[1]~input ;
+; Maximum fan-out                             ; 16           ;
+; Total fan-out                               ; 152          ;
+; Average fan-out                             ; 2.20         ;
++---------------------------------------------+--------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -209,21 +208,11 @@ applicable agreement for further details.
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name      ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------+--------------+
-; |Lab6_1                    ; 28 (7)            ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 16   ; 0            ; |Lab6_1                  ; work         ;
+; |Lab6_1                    ; 29 (8)            ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 16   ; 0            ; |Lab6_1                  ; work         ;
 ;    |Intto7seg:Digit0|      ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab6_1|Intto7seg:Digit0 ; work         ;
 ;    |Intto7seg:Digit3|      ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab6_1|Intto7seg:Digit3 ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+--------------------------------------------------------------+
-; Registers Removed During Synthesis                           ;
-+---------------------------------------+----------------------+
-; Register name                         ; Reason for Removal   ;
-+---------------------------------------+----------------------+
-; temp1[0]                              ; Merged with temp2[0] ;
-; Total Number of Removed Registers = 1 ;                      ;
-+---------------------------------------+----------------------+
 
 
 +------------------------------------------------------+
@@ -231,10 +220,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 7     ;
+; Total registers                              ; 8     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 7     ;
+; Number of registers using Asynchronous Clear ; 8     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
@@ -274,7 +263,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Thu Mar 28 16:30:21 2024
+    Info: Processing started: Tue Apr 02 15:44:21 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab6_1 -c Lab6_1
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 4 design units, including 2 entities, in source file lab6_1.vhd
@@ -289,14 +278,14 @@ Info (12128): Elaborating entity "Intto7seg" for hierarchy "Intto7seg:Digit0"
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 44 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 45 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 14 output pins
-    Info (21061): Implemented 28 logic cells
+    Info (21061): Implemented 29 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 2 warnings
     Info: Peak virtual memory: 4681 megabytes
-    Info: Processing ended: Thu Mar 28 16:30:23 2024
-    Info: Elapsed time: 00:00:02
+    Info: Processing ended: Tue Apr 02 15:44:24 2024
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:01
 
 
