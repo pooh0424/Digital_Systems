@@ -1,0 +1,1368 @@
+TimeQuest Timing Analyzer report for Lab8_1
+Sat Apr 27 11:24:48 2024
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 85C Model Fmax Summary
+  6. Timing Closure Recommendations
+  7. Slow 1200mV 85C Model Setup Summary
+  8. Slow 1200mV 85C Model Hold Summary
+  9. Slow 1200mV 85C Model Recovery Summary
+ 10. Slow 1200mV 85C Model Removal Summary
+ 11. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 12. Slow 1200mV 85C Model Setup: 'CLK_DIV:clkgen|CLK_1Khz'
+ 13. Slow 1200mV 85C Model Setup: 'KEY[2]'
+ 14. Slow 1200mV 85C Model Setup: 'CLOCK_50'
+ 15. Slow 1200mV 85C Model Hold: 'CLOCK_50'
+ 16. Slow 1200mV 85C Model Hold: 'KEY[2]'
+ 17. Slow 1200mV 85C Model Hold: 'CLK_DIV:clkgen|CLK_1Khz'
+ 18. Slow 1200mV 85C Model Minimum Pulse Width: 'KEY[2]'
+ 19. Slow 1200mV 85C Model Minimum Pulse Width: 'CLOCK_50'
+ 20. Slow 1200mV 85C Model Minimum Pulse Width: 'CLK_DIV:clkgen|CLK_1Khz'
+ 21. Clock to Output Times
+ 22. Minimum Clock to Output Times
+ 23. Slow 1200mV 85C Model Metastability Report
+ 24. Slow 1200mV 0C Model Fmax Summary
+ 25. Slow 1200mV 0C Model Setup Summary
+ 26. Slow 1200mV 0C Model Hold Summary
+ 27. Slow 1200mV 0C Model Recovery Summary
+ 28. Slow 1200mV 0C Model Removal Summary
+ 29. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 30. Slow 1200mV 0C Model Setup: 'CLK_DIV:clkgen|CLK_1Khz'
+ 31. Slow 1200mV 0C Model Setup: 'CLOCK_50'
+ 32. Slow 1200mV 0C Model Setup: 'KEY[2]'
+ 33. Slow 1200mV 0C Model Hold: 'CLOCK_50'
+ 34. Slow 1200mV 0C Model Hold: 'KEY[2]'
+ 35. Slow 1200mV 0C Model Hold: 'CLK_DIV:clkgen|CLK_1Khz'
+ 36. Slow 1200mV 0C Model Minimum Pulse Width: 'KEY[2]'
+ 37. Slow 1200mV 0C Model Minimum Pulse Width: 'CLOCK_50'
+ 38. Slow 1200mV 0C Model Minimum Pulse Width: 'CLK_DIV:clkgen|CLK_1Khz'
+ 39. Clock to Output Times
+ 40. Minimum Clock to Output Times
+ 41. Slow 1200mV 0C Model Metastability Report
+ 42. Fast 1200mV 0C Model Setup Summary
+ 43. Fast 1200mV 0C Model Hold Summary
+ 44. Fast 1200mV 0C Model Recovery Summary
+ 45. Fast 1200mV 0C Model Removal Summary
+ 46. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 47. Fast 1200mV 0C Model Setup: 'CLOCK_50'
+ 48. Fast 1200mV 0C Model Setup: 'KEY[2]'
+ 49. Fast 1200mV 0C Model Setup: 'CLK_DIV:clkgen|CLK_1Khz'
+ 50. Fast 1200mV 0C Model Hold: 'CLOCK_50'
+ 51. Fast 1200mV 0C Model Hold: 'KEY[2]'
+ 52. Fast 1200mV 0C Model Hold: 'CLK_DIV:clkgen|CLK_1Khz'
+ 53. Fast 1200mV 0C Model Minimum Pulse Width: 'KEY[2]'
+ 54. Fast 1200mV 0C Model Minimum Pulse Width: 'CLOCK_50'
+ 55. Fast 1200mV 0C Model Minimum Pulse Width: 'CLK_DIV:clkgen|CLK_1Khz'
+ 56. Clock to Output Times
+ 57. Minimum Clock to Output Times
+ 58. Fast 1200mV 0C Model Metastability Report
+ 59. Multicorner Timing Analysis Summary
+ 60. Clock to Output Times
+ 61. Minimum Clock to Output Times
+ 62. Board Trace Model Assignments
+ 63. Input Transition Times
+ 64. Slow Corner Signal Integrity Metrics
+ 65. Fast Corner Signal Integrity Metrics
+ 66. Setup Transfers
+ 67. Hold Transfers
+ 68. Report TCCS
+ 69. Report RSKM
+ 70. Unconstrained Paths
+ 71. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                       ;
++--------------------+----------------------------------------------------+
+; Quartus II Version ; Version 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name      ; Lab8_1                                             ;
+; Device Family      ; Cyclone III                                        ;
+; Device Name        ; EP3C16F484C6                                       ;
+; Timing Models      ; Final                                              ;
+; Delay Model        ; Combined                                           ;
+; Rise/Fall Delays   ; Enabled                                            ;
++--------------------+----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ; < 0.1%      ;
+;     Processors 5-8         ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                           ;
++-------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------------+
+; Clock Name              ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                     ;
++-------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------------+
+; CLK_DIV:clkgen|CLK_1Khz ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLK_DIV:clkgen|CLK_1Khz } ;
+; CLOCK_50                ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLOCK_50 }                ;
+; KEY[2]                  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { KEY[2] }                  ;
++-------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------------+
+
+
++---------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary                                                                      ;
++------------+-----------------+-------------------------+------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name              ; Note                                           ;
++------------+-----------------+-------------------------+------------------------------------------------+
+; 896.86 MHz ; 500.0 MHz       ; CLK_DIV:clkgen|CLK_1Khz ; limit due to minimum period restriction (tmin) ;
++------------+-----------------+-------------------------+------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++--------------------------------------------------+
+; Slow 1200mV 85C Model Setup Summary              ;
++-------------------------+--------+---------------+
+; Clock                   ; Slack  ; End Point TNS ;
++-------------------------+--------+---------------+
+; CLK_DIV:clkgen|CLK_1Khz ; -0.115 ; -0.211        ;
+; KEY[2]                  ; -0.036 ; -0.036        ;
+; CLOCK_50                ; 0.102  ; 0.000         ;
++-------------------------+--------+---------------+
+
+
++--------------------------------------------------+
+; Slow 1200mV 85C Model Hold Summary               ;
++-------------------------+--------+---------------+
+; Clock                   ; Slack  ; End Point TNS ;
++-------------------------+--------+---------------+
+; CLOCK_50                ; -0.125 ; -0.125        ;
+; KEY[2]                  ; 0.301  ; 0.000         ;
+; CLK_DIV:clkgen|CLK_1Khz ; 0.359  ; 0.000         ;
++-------------------------+--------+---------------+
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
++-------------------------+--------+----------------+
+; Clock                   ; Slack  ; End Point TNS  ;
++-------------------------+--------+----------------+
+; KEY[2]                  ; -3.000 ; -6.000         ;
+; CLOCK_50                ; -3.000 ; -4.000         ;
+; CLK_DIV:clkgen|CLK_1Khz ; -1.000 ; -5.000         ;
++-------------------------+--------+----------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'CLK_DIV:clkgen|CLK_1Khz'                                                                          ;
++--------+-------------+-------------+-------------------------+-------------------------+--------------+------------+------------+
+; Slack  ; From Node   ; To Node     ; Launch Clock            ; Latch Clock             ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------+-------------+-------------------------+-------------------------+--------------+------------+------------+
+; -0.115 ; SCANLINE[0] ; random[1]   ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 1.000        ; -0.061     ; 1.049      ;
+; -0.075 ; SCANLINE[0] ; random[2]   ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 1.000        ; -0.061     ; 1.009      ;
+; -0.021 ; SCANLINE[1] ; SCANLINE[2] ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 1.000        ; -0.061     ; 0.955      ;
+; 0.165  ; SCANLINE[0] ; SCANLINE[1] ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 1.000        ; -0.061     ; 0.769      ;
+; 0.167  ; SCANLINE[0] ; SCANLINE[2] ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 1.000        ; -0.061     ; 0.767      ;
+; 0.222  ; random[2]   ; random[1]   ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 1.000        ; -0.061     ; 0.712      ;
+; 0.222  ; random[1]   ; random[2]   ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 1.000        ; -0.061     ; 0.712      ;
+; 0.275  ; SCANLINE[0] ; SCANLINE[0] ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 1.000        ; -0.061     ; 0.659      ;
+; 0.275  ; random[1]   ; random[1]   ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 1.000        ; -0.061     ; 0.659      ;
+; 0.275  ; SCANLINE[2] ; SCANLINE[2] ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 1.000        ; -0.061     ; 0.659      ;
+; 0.275  ; random[2]   ; random[2]   ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 1.000        ; -0.061     ; 0.659      ;
+; 0.275  ; SCANLINE[1] ; SCANLINE[1] ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 1.000        ; -0.061     ; 0.659      ;
++--------+-------------+-------------+-------------------------+-------------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'KEY[2]'                                                                                ;
++--------+-------------+--------------+-------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node   ; To Node      ; Launch Clock            ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------+--------------+-------------------------+-------------+--------------+------------+------------+
+; -0.036 ; SCANLINE[0] ; selrandom[0] ; CLK_DIV:clkgen|CLK_1Khz ; KEY[2]      ; 1.000        ; 0.639      ; 1.660      ;
+; 0.011  ; random[2]   ; selrandom[2] ; CLK_DIV:clkgen|CLK_1Khz ; KEY[2]      ; 1.000        ; 0.639      ; 1.613      ;
+; 0.200  ; random[1]   ; selrandom[1] ; CLK_DIV:clkgen|CLK_1Khz ; KEY[2]      ; 1.000        ; 0.639      ; 1.424      ;
++--------+-------------+--------------+-------------------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'CLOCK_50'                                                                                                    ;
++-------+-------------------------+-------------------------+-------------------------+-------------+--------------+------------+------------+
+; Slack ; From Node               ; To Node                 ; Launch Clock            ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------+-------------------------+-------------------------+-------------+--------------+------------+------------+
+; 0.102 ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; CLOCK_50    ; 0.500        ; 1.621      ; 2.203      ;
+; 0.613 ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; CLOCK_50    ; 1.000        ; 1.621      ; 2.192      ;
++-------+-------------------------+-------------------------+-------------------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'CLOCK_50'                                                                                                      ;
++--------+-------------------------+-------------------------+-------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node               ; To Node                 ; Launch Clock            ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------+-------------------------+-------------------------+-------------+--------------+------------+------------+
+; -0.125 ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; CLOCK_50    ; 0.000        ; 1.674      ; 1.935      ;
+; 0.421  ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; CLOCK_50    ; -0.500       ; 1.674      ; 1.981      ;
++--------+-------------------------+-------------------------+-------------------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'KEY[2]'                                                                                ;
++-------+-------------+--------------+-------------------------+-------------+--------------+------------+------------+
+; Slack ; From Node   ; To Node      ; Launch Clock            ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------+--------------+-------------------------+-------------+--------------+------------+------------+
+; 0.301 ; random[1]   ; selrandom[1] ; CLK_DIV:clkgen|CLK_1Khz ; KEY[2]      ; 0.000        ; 0.845      ; 1.333      ;
+; 0.366 ; random[2]   ; selrandom[2] ; CLK_DIV:clkgen|CLK_1Khz ; KEY[2]      ; 0.000        ; 0.845      ; 1.398      ;
+; 0.434 ; SCANLINE[0] ; selrandom[0] ; CLK_DIV:clkgen|CLK_1Khz ; KEY[2]      ; 0.000        ; 0.845      ; 1.466      ;
++-------+-------------+--------------+-------------------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'CLK_DIV:clkgen|CLK_1Khz'                                                                          ;
++-------+-------------+-------------+-------------------------+-------------------------+--------------+------------+------------+
+; Slack ; From Node   ; To Node     ; Launch Clock            ; Latch Clock             ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------+-------------+-------------------------+-------------------------+--------------+------------+------------+
+; 0.359 ; random[2]   ; random[2]   ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 0.000        ; 0.061      ; 0.577      ;
+; 0.359 ; random[1]   ; random[1]   ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 0.000        ; 0.061      ; 0.577      ;
+; 0.359 ; SCANLINE[2] ; SCANLINE[2] ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 0.000        ; 0.061      ; 0.577      ;
+; 0.359 ; SCANLINE[1] ; SCANLINE[1] ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 0.000        ; 0.061      ; 0.577      ;
+; 0.362 ; SCANLINE[0] ; SCANLINE[0] ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 0.000        ; 0.061      ; 0.580      ;
+; 0.393 ; random[1]   ; random[2]   ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 0.000        ; 0.061      ; 0.611      ;
+; 0.393 ; random[2]   ; random[1]   ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 0.000        ; 0.061      ; 0.611      ;
+; 0.433 ; SCANLINE[0] ; SCANLINE[2] ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 0.000        ; 0.061      ; 0.651      ;
+; 0.434 ; SCANLINE[0] ; SCANLINE[1] ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 0.000        ; 0.061      ; 0.652      ;
+; 0.575 ; SCANLINE[1] ; SCANLINE[2] ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 0.000        ; 0.061      ; 0.793      ;
+; 0.639 ; SCANLINE[0] ; random[1]   ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 0.000        ; 0.061      ; 0.857      ;
+; 0.641 ; SCANLINE[0] ; random[2]   ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 0.000        ; 0.061      ; 0.859      ;
++-------+-------------+-------------+-------------------------+-------------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width: 'KEY[2]'                                                ;
++--------+--------------+----------------+------------------+--------+------------+------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target           ;
++--------+--------------+----------------+------------------+--------+------------+------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate        ; KEY[2] ; Rise       ; KEY[2]           ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; selrandom[0]     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; selrandom[1]     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; selrandom[2]     ;
+; 0.104  ; 0.288        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; selrandom[0]     ;
+; 0.104  ; 0.288        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; selrandom[1]     ;
+; 0.104  ; 0.288        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; selrandom[2]     ;
+; 0.266  ; 0.266        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; selrandom[0]|clk ;
+; 0.266  ; 0.266        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; selrandom[1]|clk ;
+; 0.266  ; 0.266        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; selrandom[2]|clk ;
+; 0.339  ; 0.339        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; KEY[2]~input|o   ;
+; 0.493  ; 0.709        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; selrandom[0]     ;
+; 0.493  ; 0.709        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; selrandom[1]     ;
+; 0.493  ; 0.709        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; selrandom[2]     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; KEY[2]~input|i   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; KEY[2]~input|i   ;
+; 0.661  ; 0.661        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; KEY[2]~input|o   ;
+; 0.733  ; 0.733        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; selrandom[0]|clk ;
+; 0.733  ; 0.733        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; selrandom[1]|clk ;
+; 0.733  ; 0.733        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; selrandom[2]|clk ;
++--------+--------------+----------------+------------------+--------+------------+------------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width: 'CLOCK_50'                                                       ;
++--------+--------------+----------------+------------------+----------+------------+-------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock    ; Clock Edge ; Target                  ;
++--------+--------------+----------------+------------------+----------+------------+-------------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate        ; CLOCK_50 ; Rise       ; CLOCK_50                ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; CLOCK_50 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+; 0.174  ; 0.358        ; 0.184          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+; 0.336  ; 0.336        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; clkgen|CLK_1Khz|clk     ;
+; 0.339  ; 0.339        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; CLOCK_50~input|o        ;
+; 0.424  ; 0.640        ; 0.216          ; High Pulse Width ; CLOCK_50 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; CLOCK_50~input|i        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; CLOCK_50~input|i        ;
+; 0.661  ; 0.661        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; CLOCK_50~input|o        ;
+; 0.664  ; 0.664        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; clkgen|CLK_1Khz|clk     ;
++--------+--------------+----------------+------------------+----------+------------+-------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width: 'CLK_DIV:clkgen|CLK_1Khz'                                                                ;
++--------+--------------+----------------+------------------+-------------------------+------------+----------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock                   ; Clock Edge ; Target                           ;
++--------+--------------+----------------+------------------+-------------------------+------------+----------------------------------+
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; SCANLINE[0]                      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; SCANLINE[1]                      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; SCANLINE[2]                      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; random[1]                        ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; random[2]                        ;
+; 0.288  ; 0.472        ; 0.184          ; Low Pulse Width  ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; SCANLINE[0]                      ;
+; 0.288  ; 0.472        ; 0.184          ; Low Pulse Width  ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; SCANLINE[1]                      ;
+; 0.288  ; 0.472        ; 0.184          ; Low Pulse Width  ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; SCANLINE[2]                      ;
+; 0.288  ; 0.472        ; 0.184          ; Low Pulse Width  ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; random[1]                        ;
+; 0.288  ; 0.472        ; 0.184          ; Low Pulse Width  ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; random[2]                        ;
+; 0.308  ; 0.524        ; 0.216          ; High Pulse Width ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; SCANLINE[0]                      ;
+; 0.308  ; 0.524        ; 0.216          ; High Pulse Width ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; SCANLINE[1]                      ;
+; 0.308  ; 0.524        ; 0.216          ; High Pulse Width ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; SCANLINE[2]                      ;
+; 0.308  ; 0.524        ; 0.216          ; High Pulse Width ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; random[1]                        ;
+; 0.308  ; 0.524        ; 0.216          ; High Pulse Width ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; random[2]                        ;
+; 0.450  ; 0.450        ; 0.000          ; Low Pulse Width  ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; SCANLINE[0]|clk                  ;
+; 0.450  ; 0.450        ; 0.000          ; Low Pulse Width  ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; SCANLINE[1]|clk                  ;
+; 0.450  ; 0.450        ; 0.000          ; Low Pulse Width  ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; SCANLINE[2]|clk                  ;
+; 0.450  ; 0.450        ; 0.000          ; Low Pulse Width  ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; random[1]|clk                    ;
+; 0.450  ; 0.450        ; 0.000          ; Low Pulse Width  ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; random[2]|clk                    ;
+; 0.459  ; 0.459        ; 0.000          ; Low Pulse Width  ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; clkgen|CLK_1Khz~clkctrl|inclk[0] ;
+; 0.459  ; 0.459        ; 0.000          ; Low Pulse Width  ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; clkgen|CLK_1Khz~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; clkgen|CLK_1Khz|q                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; clkgen|CLK_1Khz|q                ;
+; 0.540  ; 0.540        ; 0.000          ; High Pulse Width ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; clkgen|CLK_1Khz~clkctrl|inclk[0] ;
+; 0.540  ; 0.540        ; 0.000          ; High Pulse Width ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; clkgen|CLK_1Khz~clkctrl|outclk   ;
+; 0.548  ; 0.548        ; 0.000          ; High Pulse Width ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; SCANLINE[0]|clk                  ;
+; 0.548  ; 0.548        ; 0.000          ; High Pulse Width ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; SCANLINE[1]|clk                  ;
+; 0.548  ; 0.548        ; 0.000          ; High Pulse Width ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; SCANLINE[2]|clk                  ;
+; 0.548  ; 0.548        ; 0.000          ; High Pulse Width ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; random[1]|clk                    ;
+; 0.548  ; 0.548        ; 0.000          ; High Pulse Width ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; random[2]|clk                    ;
++--------+--------------+----------------+------------------+-------------------------+------------+----------------------------------+
+
+
++----------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                        ;
++-------------+-------------------------+-------+-------+------------+-------------------------+
+; Data Port   ; Clock Port              ; Rise  ; Fall  ; Clock Edge ; Clock Reference         ;
++-------------+-------------------------+-------+-------+------------+-------------------------+
+; GPIO_0[*]   ; CLK_DIV:clkgen|CLK_1Khz ; 7.105 ; 7.146 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_0[9]  ; CLK_DIV:clkgen|CLK_1Khz ; 6.167 ; 6.262 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_0[11] ; CLK_DIV:clkgen|CLK_1Khz ; 6.227 ; 6.195 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_0[13] ; CLK_DIV:clkgen|CLK_1Khz ; 7.105 ; 7.146 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_0[14] ; CLK_DIV:clkgen|CLK_1Khz ; 6.695 ; 6.804 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_0[17] ; CLK_DIV:clkgen|CLK_1Khz ; 6.486 ; 6.441 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_0[19] ; CLK_DIV:clkgen|CLK_1Khz ; 6.927 ; 6.914 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+; GPIO_1[*]   ; CLK_DIV:clkgen|CLK_1Khz ; 7.268 ; 7.217 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[9]  ; CLK_DIV:clkgen|CLK_1Khz ; 6.362 ; 6.499 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[11] ; CLK_DIV:clkgen|CLK_1Khz ; 6.281 ; 6.246 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[13] ; CLK_DIV:clkgen|CLK_1Khz ; 6.526 ; 6.525 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[14] ; CLK_DIV:clkgen|CLK_1Khz ; 6.153 ; 6.164 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[15] ; CLK_DIV:clkgen|CLK_1Khz ; 7.108 ; 7.039 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[17] ; CLK_DIV:clkgen|CLK_1Khz ; 7.268 ; 7.217 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[19] ; CLK_DIV:clkgen|CLK_1Khz ; 6.523 ; 6.686 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[21] ; CLK_DIV:clkgen|CLK_1Khz ; 6.115 ; 6.240 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+; GPIO_0[*]   ; KEY[2]                  ; 8.108 ; 8.222 ; Rise       ; KEY[2]                  ;
+;  GPIO_0[11] ; KEY[2]                  ; 6.680 ; 6.712 ; Rise       ; KEY[2]                  ;
+;  GPIO_0[13] ; KEY[2]                  ; 8.108 ; 8.222 ; Rise       ; KEY[2]                  ;
+;  GPIO_0[19] ; KEY[2]                  ; 7.930 ; 7.990 ; Rise       ; KEY[2]                  ;
+; GPIO_1[*]   ; KEY[2]                  ; 8.195 ; 8.279 ; Rise       ; KEY[2]                  ;
+;  GPIO_1[13] ; KEY[2]                  ; 6.979 ; 7.042 ; Rise       ; KEY[2]                  ;
+;  GPIO_1[15] ; KEY[2]                  ; 8.035 ; 8.101 ; Rise       ; KEY[2]                  ;
+;  GPIO_1[17] ; KEY[2]                  ; 8.195 ; 8.279 ; Rise       ; KEY[2]                  ;
++-------------+-------------------------+-------+-------+------------+-------------------------+
+
+
++----------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                ;
++-------------+-------------------------+-------+-------+------------+-------------------------+
+; Data Port   ; Clock Port              ; Rise  ; Fall  ; Clock Edge ; Clock Reference         ;
++-------------+-------------------------+-------+-------+------------+-------------------------+
+; GPIO_0[*]   ; CLK_DIV:clkgen|CLK_1Khz ; 5.629 ; 5.677 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_0[9]  ; CLK_DIV:clkgen|CLK_1Khz ; 5.629 ; 5.729 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_0[11] ; CLK_DIV:clkgen|CLK_1Khz ; 5.742 ; 5.677 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_0[13] ; CLK_DIV:clkgen|CLK_1Khz ; 6.110 ; 6.089 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_0[14] ; CLK_DIV:clkgen|CLK_1Khz ; 6.267 ; 6.231 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_0[17] ; CLK_DIV:clkgen|CLK_1Khz ; 5.951 ; 6.076 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_0[19] ; CLK_DIV:clkgen|CLK_1Khz ; 5.938 ; 5.865 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+; GPIO_1[*]   ; CLK_DIV:clkgen|CLK_1Khz ; 5.669 ; 5.712 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[9]  ; CLK_DIV:clkgen|CLK_1Khz ; 6.009 ; 6.005 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[11] ; CLK_DIV:clkgen|CLK_1Khz ; 5.776 ; 5.898 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[13] ; CLK_DIV:clkgen|CLK_1Khz ; 6.028 ; 5.993 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[14] ; CLK_DIV:clkgen|CLK_1Khz ; 5.714 ; 5.712 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[15] ; CLK_DIV:clkgen|CLK_1Khz ; 6.039 ; 5.969 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[17] ; CLK_DIV:clkgen|CLK_1Khz ; 6.193 ; 6.141 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[19] ; CLK_DIV:clkgen|CLK_1Khz ; 6.155 ; 6.194 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[21] ; CLK_DIV:clkgen|CLK_1Khz ; 5.669 ; 5.801 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+; GPIO_0[*]   ; KEY[2]                  ; 6.485 ; 6.486 ; Rise       ; KEY[2]                  ;
+;  GPIO_0[11] ; KEY[2]                  ; 6.485 ; 6.486 ; Rise       ; KEY[2]                  ;
+;  GPIO_0[13] ; KEY[2]                  ; 7.157 ; 7.170 ; Rise       ; KEY[2]                  ;
+;  GPIO_0[19] ; KEY[2]                  ; 6.985 ; 6.946 ; Rise       ; KEY[2]                  ;
+; GPIO_1[*]   ; KEY[2]                  ; 6.771 ; 6.781 ; Rise       ; KEY[2]                  ;
+;  GPIO_1[13] ; KEY[2]                  ; 6.771 ; 6.802 ; Rise       ; KEY[2]                  ;
+;  GPIO_1[15] ; KEY[2]                  ; 6.807 ; 6.781 ; Rise       ; KEY[2]                  ;
+;  GPIO_1[17] ; KEY[2]                  ; 6.961 ; 6.953 ; Rise       ; KEY[2]                  ;
++-------------+-------------------------+-------+-------+------------+-------------------------+
+
+
+----------------------------------------------
+; Slow 1200mV 85C Model Metastability Report ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++---------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                                                                       ;
++------------+-----------------+-------------------------+------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name              ; Note                                           ;
++------------+-----------------+-------------------------+------------------------------------------------+
+; 1001.0 MHz ; 500.0 MHz       ; CLK_DIV:clkgen|CLK_1Khz ; limit due to minimum period restriction (tmin) ;
++------------+-----------------+-------------------------+------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++-------------------------------------------------+
+; Slow 1200mV 0C Model Setup Summary              ;
++-------------------------+-------+---------------+
+; Clock                   ; Slack ; End Point TNS ;
++-------------------------+-------+---------------+
+; CLK_DIV:clkgen|CLK_1Khz ; 0.001 ; 0.000         ;
+; CLOCK_50                ; 0.201 ; 0.000         ;
+; KEY[2]                  ; 0.220 ; 0.000         ;
++-------------------------+-------+---------------+
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Hold Summary                ;
++-------------------------+--------+---------------+
+; Clock                   ; Slack  ; End Point TNS ;
++-------------------------+--------+---------------+
+; CLOCK_50                ; -0.183 ; -0.183        ;
+; KEY[2]                  ; 0.153  ; 0.000         ;
+; CLK_DIV:clkgen|CLK_1Khz ; 0.311  ; 0.000         ;
++-------------------------+--------+---------------+
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
++-------------------------+--------+---------------+
+; Clock                   ; Slack  ; End Point TNS ;
++-------------------------+--------+---------------+
+; KEY[2]                  ; -3.000 ; -6.000        ;
+; CLOCK_50                ; -3.000 ; -4.000        ;
+; CLK_DIV:clkgen|CLK_1Khz ; -1.000 ; -5.000        ;
++-------------------------+--------+---------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'CLK_DIV:clkgen|CLK_1Khz'                                                                          ;
++-------+-------------+-------------+-------------------------+-------------------------+--------------+------------+------------+
+; Slack ; From Node   ; To Node     ; Launch Clock            ; Latch Clock             ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------+-------------+-------------------------+-------------------------+--------------+------------+------------+
+; 0.001 ; SCANLINE[0] ; random[1]   ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 1.000        ; -0.056     ; 0.938      ;
+; 0.038 ; SCANLINE[0] ; random[2]   ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 1.000        ; -0.056     ; 0.901      ;
+; 0.085 ; SCANLINE[1] ; SCANLINE[2] ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 1.000        ; -0.056     ; 0.854      ;
+; 0.246 ; SCANLINE[0] ; SCANLINE[1] ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 1.000        ; -0.056     ; 0.693      ;
+; 0.250 ; SCANLINE[0] ; SCANLINE[2] ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 1.000        ; -0.056     ; 0.689      ;
+; 0.299 ; random[2]   ; random[1]   ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 1.000        ; -0.056     ; 0.640      ;
+; 0.299 ; random[1]   ; random[2]   ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 1.000        ; -0.056     ; 0.640      ;
+; 0.356 ; SCANLINE[0] ; SCANLINE[0] ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 1.000        ; -0.056     ; 0.583      ;
+; 0.356 ; random[1]   ; random[1]   ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 1.000        ; -0.056     ; 0.583      ;
+; 0.356 ; SCANLINE[2] ; SCANLINE[2] ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 1.000        ; -0.056     ; 0.583      ;
+; 0.356 ; random[2]   ; random[2]   ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 1.000        ; -0.056     ; 0.583      ;
+; 0.356 ; SCANLINE[1] ; SCANLINE[1] ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 1.000        ; -0.056     ; 0.583      ;
++-------+-------------+-------------+-------------------------+-------------------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'CLOCK_50'                                                                                                     ;
++-------+-------------------------+-------------------------+-------------------------+-------------+--------------+------------+------------+
+; Slack ; From Node               ; To Node                 ; Launch Clock            ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------+-------------------------+-------------------------+-------------+--------------+------------+------------+
+; 0.201 ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; CLOCK_50    ; 0.500        ; 1.532      ; 1.996      ;
+; 0.722 ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; CLOCK_50    ; 1.000        ; 1.532      ; 1.975      ;
++-------+-------------------------+-------------------------+-------------------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'KEY[2]'                                                                                ;
++-------+-------------+--------------+-------------------------+-------------+--------------+------------+------------+
+; Slack ; From Node   ; To Node      ; Launch Clock            ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------+--------------+-------------------------+-------------+--------------+------------+------------+
+; 0.220 ; SCANLINE[0] ; selrandom[0] ; CLK_DIV:clkgen|CLK_1Khz ; KEY[2]      ; 1.000        ; 0.707      ; 1.472      ;
+; 0.265 ; random[2]   ; selrandom[2] ; CLK_DIV:clkgen|CLK_1Khz ; KEY[2]      ; 1.000        ; 0.707      ; 1.427      ;
+; 0.416 ; random[1]   ; selrandom[1] ; CLK_DIV:clkgen|CLK_1Khz ; KEY[2]      ; 1.000        ; 0.707      ; 1.276      ;
++-------+-------------+--------------+-------------------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'CLOCK_50'                                                                                                       ;
++--------+-------------------------+-------------------------+-------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node               ; To Node                 ; Launch Clock            ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------+-------------------------+-------------------------+-------------+--------------+------------+------------+
+; -0.183 ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; CLOCK_50    ; 0.000        ; 1.579      ; 1.750      ;
+; 0.358  ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; CLOCK_50    ; -0.500       ; 1.579      ; 1.791      ;
++--------+-------------------------+-------------------------+-------------------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'KEY[2]'                                                                                 ;
++-------+-------------+--------------+-------------------------+-------------+--------------+------------+------------+
+; Slack ; From Node   ; To Node      ; Launch Clock            ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------+--------------+-------------------------+-------------+--------------+------------+------------+
+; 0.153 ; random[1]   ; selrandom[1] ; CLK_DIV:clkgen|CLK_1Khz ; KEY[2]      ; 0.000        ; 0.892      ; 1.219      ;
+; 0.215 ; random[2]   ; selrandom[2] ; CLK_DIV:clkgen|CLK_1Khz ; KEY[2]      ; 0.000        ; 0.892      ; 1.281      ;
+; 0.272 ; SCANLINE[0] ; selrandom[0] ; CLK_DIV:clkgen|CLK_1Khz ; KEY[2]      ; 0.000        ; 0.892      ; 1.338      ;
++-------+-------------+--------------+-------------------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'CLK_DIV:clkgen|CLK_1Khz'                                                                           ;
++-------+-------------+-------------+-------------------------+-------------------------+--------------+------------+------------+
+; Slack ; From Node   ; To Node     ; Launch Clock            ; Latch Clock             ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------+-------------+-------------------------+-------------------------+--------------+------------+------------+
+; 0.311 ; random[2]   ; random[2]   ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 0.000        ; 0.056      ; 0.511      ;
+; 0.311 ; random[1]   ; random[1]   ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 0.000        ; 0.056      ; 0.511      ;
+; 0.311 ; SCANLINE[2] ; SCANLINE[2] ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 0.000        ; 0.056      ; 0.511      ;
+; 0.311 ; SCANLINE[1] ; SCANLINE[1] ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 0.000        ; 0.056      ; 0.511      ;
+; 0.319 ; SCANLINE[0] ; SCANLINE[0] ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 0.000        ; 0.056      ; 0.519      ;
+; 0.348 ; random[1]   ; random[2]   ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 0.000        ; 0.056      ; 0.548      ;
+; 0.348 ; random[2]   ; random[1]   ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 0.000        ; 0.056      ; 0.548      ;
+; 0.385 ; SCANLINE[0] ; SCANLINE[2] ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 0.000        ; 0.056      ; 0.585      ;
+; 0.386 ; SCANLINE[0] ; SCANLINE[1] ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 0.000        ; 0.056      ; 0.586      ;
+; 0.515 ; SCANLINE[1] ; SCANLINE[2] ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 0.000        ; 0.056      ; 0.715      ;
+; 0.569 ; SCANLINE[0] ; random[1]   ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 0.000        ; 0.056      ; 0.769      ;
+; 0.572 ; SCANLINE[0] ; random[2]   ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 0.000        ; 0.056      ; 0.772      ;
++-------+-------------+-------------+-------------------------+-------------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width: 'KEY[2]'                                                 ;
++--------+--------------+----------------+------------------+--------+------------+------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target           ;
++--------+--------------+----------------+------------------+--------+------------+------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate        ; KEY[2] ; Rise       ; KEY[2]           ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; selrandom[0]     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; selrandom[1]     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; selrandom[2]     ;
+; 0.163  ; 0.347        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; selrandom[0]     ;
+; 0.163  ; 0.347        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; selrandom[1]     ;
+; 0.163  ; 0.347        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; selrandom[2]     ;
+; 0.323  ; 0.323        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; selrandom[0]|clk ;
+; 0.323  ; 0.323        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; selrandom[1]|clk ;
+; 0.323  ; 0.323        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; selrandom[2]|clk ;
+; 0.339  ; 0.339        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; KEY[2]~input|o   ;
+; 0.437  ; 0.653        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; selrandom[0]     ;
+; 0.437  ; 0.653        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; selrandom[1]     ;
+; 0.437  ; 0.653        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; selrandom[2]     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; KEY[2]~input|i   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; KEY[2]~input|i   ;
+; 0.661  ; 0.661        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; KEY[2]~input|o   ;
+; 0.677  ; 0.677        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; selrandom[0]|clk ;
+; 0.677  ; 0.677        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; selrandom[1]|clk ;
+; 0.677  ; 0.677        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; selrandom[2]|clk ;
++--------+--------------+----------------+------------------+--------+------------+------------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width: 'CLOCK_50'                                                        ;
++--------+--------------+----------------+------------------+----------+------------+-------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock    ; Clock Edge ; Target                  ;
++--------+--------------+----------------+------------------+----------+------------+-------------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate        ; CLOCK_50 ; Rise       ; CLOCK_50                ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; CLOCK_50 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+; 0.155  ; 0.339        ; 0.184          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+; 0.315  ; 0.315        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; clkgen|CLK_1Khz|clk     ;
+; 0.339  ; 0.339        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; CLOCK_50~input|o        ;
+; 0.444  ; 0.660        ; 0.216          ; High Pulse Width ; CLOCK_50 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; CLOCK_50~input|i        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; CLOCK_50~input|i        ;
+; 0.661  ; 0.661        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; CLOCK_50~input|o        ;
+; 0.684  ; 0.684        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; clkgen|CLK_1Khz|clk     ;
++--------+--------------+----------------+------------------+----------+------------+-------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width: 'CLK_DIV:clkgen|CLK_1Khz'                                                                 ;
++--------+--------------+----------------+------------------+-------------------------+------------+----------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock                   ; Clock Edge ; Target                           ;
++--------+--------------+----------------+------------------+-------------------------+------------+----------------------------------+
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; SCANLINE[0]                      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; SCANLINE[1]                      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; SCANLINE[2]                      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; random[1]                        ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; random[2]                        ;
+; 0.295  ; 0.511        ; 0.216          ; High Pulse Width ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; SCANLINE[0]                      ;
+; 0.295  ; 0.511        ; 0.216          ; High Pulse Width ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; SCANLINE[1]                      ;
+; 0.295  ; 0.511        ; 0.216          ; High Pulse Width ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; SCANLINE[2]                      ;
+; 0.295  ; 0.511        ; 0.216          ; High Pulse Width ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; random[1]                        ;
+; 0.295  ; 0.511        ; 0.216          ; High Pulse Width ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; random[2]                        ;
+; 0.304  ; 0.488        ; 0.184          ; Low Pulse Width  ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; SCANLINE[0]                      ;
+; 0.304  ; 0.488        ; 0.184          ; Low Pulse Width  ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; SCANLINE[1]                      ;
+; 0.304  ; 0.488        ; 0.184          ; Low Pulse Width  ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; SCANLINE[2]                      ;
+; 0.304  ; 0.488        ; 0.184          ; Low Pulse Width  ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; random[1]                        ;
+; 0.304  ; 0.488        ; 0.184          ; Low Pulse Width  ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; random[2]                        ;
+; 0.464  ; 0.464        ; 0.000          ; Low Pulse Width  ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; SCANLINE[0]|clk                  ;
+; 0.464  ; 0.464        ; 0.000          ; Low Pulse Width  ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; SCANLINE[1]|clk                  ;
+; 0.464  ; 0.464        ; 0.000          ; Low Pulse Width  ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; SCANLINE[2]|clk                  ;
+; 0.464  ; 0.464        ; 0.000          ; Low Pulse Width  ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; random[1]|clk                    ;
+; 0.464  ; 0.464        ; 0.000          ; Low Pulse Width  ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; random[2]|clk                    ;
+; 0.471  ; 0.471        ; 0.000          ; Low Pulse Width  ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; clkgen|CLK_1Khz~clkctrl|inclk[0] ;
+; 0.471  ; 0.471        ; 0.000          ; Low Pulse Width  ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; clkgen|CLK_1Khz~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; clkgen|CLK_1Khz|q                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; clkgen|CLK_1Khz|q                ;
+; 0.528  ; 0.528        ; 0.000          ; High Pulse Width ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; clkgen|CLK_1Khz~clkctrl|inclk[0] ;
+; 0.528  ; 0.528        ; 0.000          ; High Pulse Width ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; clkgen|CLK_1Khz~clkctrl|outclk   ;
+; 0.535  ; 0.535        ; 0.000          ; High Pulse Width ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; SCANLINE[0]|clk                  ;
+; 0.535  ; 0.535        ; 0.000          ; High Pulse Width ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; SCANLINE[1]|clk                  ;
+; 0.535  ; 0.535        ; 0.000          ; High Pulse Width ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; SCANLINE[2]|clk                  ;
+; 0.535  ; 0.535        ; 0.000          ; High Pulse Width ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; random[1]|clk                    ;
+; 0.535  ; 0.535        ; 0.000          ; High Pulse Width ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; random[2]|clk                    ;
++--------+--------------+----------------+------------------+-------------------------+------------+----------------------------------+
+
+
++----------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                        ;
++-------------+-------------------------+-------+-------+------------+-------------------------+
+; Data Port   ; Clock Port              ; Rise  ; Fall  ; Clock Edge ; Clock Reference         ;
++-------------+-------------------------+-------+-------+------------+-------------------------+
+; GPIO_0[*]   ; CLK_DIV:clkgen|CLK_1Khz ; 6.624 ; 6.595 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_0[9]  ; CLK_DIV:clkgen|CLK_1Khz ; 5.738 ; 5.824 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_0[11] ; CLK_DIV:clkgen|CLK_1Khz ; 5.804 ; 5.758 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_0[13] ; CLK_DIV:clkgen|CLK_1Khz ; 6.624 ; 6.595 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_0[14] ; CLK_DIV:clkgen|CLK_1Khz ; 6.233 ; 6.353 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_0[17] ; CLK_DIV:clkgen|CLK_1Khz ; 6.007 ; 6.029 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_0[19] ; CLK_DIV:clkgen|CLK_1Khz ; 6.451 ; 6.380 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+; GPIO_1[*]   ; CLK_DIV:clkgen|CLK_1Khz ; 6.760 ; 6.702 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[9]  ; CLK_DIV:clkgen|CLK_1Khz ; 5.911 ; 6.065 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[11] ; CLK_DIV:clkgen|CLK_1Khz ; 5.830 ; 5.839 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[13] ; CLK_DIV:clkgen|CLK_1Khz ; 6.074 ; 6.045 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[14] ; CLK_DIV:clkgen|CLK_1Khz ; 5.704 ; 5.784 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[15] ; CLK_DIV:clkgen|CLK_1Khz ; 6.603 ; 6.524 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[17] ; CLK_DIV:clkgen|CLK_1Khz ; 6.760 ; 6.702 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[19] ; CLK_DIV:clkgen|CLK_1Khz ; 6.055 ; 6.236 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[21] ; CLK_DIV:clkgen|CLK_1Khz ; 5.691 ; 5.827 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+; GPIO_0[*]   ; KEY[2]                  ; 7.692 ; 7.701 ; Rise       ; KEY[2]                  ;
+;  GPIO_0[11] ; KEY[2]                  ; 6.367 ; 6.357 ; Rise       ; KEY[2]                  ;
+;  GPIO_0[13] ; KEY[2]                  ; 7.692 ; 7.701 ; Rise       ; KEY[2]                  ;
+;  GPIO_0[19] ; KEY[2]                  ; 7.519 ; 7.486 ; Rise       ; KEY[2]                  ;
+; GPIO_1[*]   ; KEY[2]                  ; 7.771 ; 7.757 ; Rise       ; KEY[2]                  ;
+;  GPIO_1[13] ; KEY[2]                  ; 6.637 ; 6.644 ; Rise       ; KEY[2]                  ;
+;  GPIO_1[15] ; KEY[2]                  ; 7.614 ; 7.579 ; Rise       ; KEY[2]                  ;
+;  GPIO_1[17] ; KEY[2]                  ; 7.771 ; 7.757 ; Rise       ; KEY[2]                  ;
++-------------+-------------------------+-------+-------+------------+-------------------------+
+
+
++----------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                ;
++-------------+-------------------------+-------+-------+------------+-------------------------+
+; Data Port   ; Clock Port              ; Rise  ; Fall  ; Clock Edge ; Clock Reference         ;
++-------------+-------------------------+-------+-------+------------+-------------------------+
+; GPIO_0[*]   ; CLK_DIV:clkgen|CLK_1Khz ; 5.239 ; 5.306 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_0[9]  ; CLK_DIV:clkgen|CLK_1Khz ; 5.239 ; 5.358 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_0[11] ; CLK_DIV:clkgen|CLK_1Khz ; 5.386 ; 5.306 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_0[13] ; CLK_DIV:clkgen|CLK_1Khz ; 5.747 ; 5.687 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_0[14] ; CLK_DIV:clkgen|CLK_1Khz ; 5.824 ; 5.853 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_0[17] ; CLK_DIV:clkgen|CLK_1Khz ; 5.549 ; 5.690 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_0[19] ; CLK_DIV:clkgen|CLK_1Khz ; 5.579 ; 5.479 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+; GPIO_1[*]   ; CLK_DIV:clkgen|CLK_1Khz ; 5.297 ; 5.360 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[9]  ; CLK_DIV:clkgen|CLK_1Khz ; 5.590 ; 5.645 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[11] ; CLK_DIV:clkgen|CLK_1Khz ; 5.399 ; 5.518 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[13] ; CLK_DIV:clkgen|CLK_1Khz ; 5.645 ; 5.581 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[14] ; CLK_DIV:clkgen|CLK_1Khz ; 5.320 ; 5.360 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[15] ; CLK_DIV:clkgen|CLK_1Khz ; 5.670 ; 5.566 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[17] ; CLK_DIV:clkgen|CLK_1Khz ; 5.821 ; 5.737 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[19] ; CLK_DIV:clkgen|CLK_1Khz ; 5.718 ; 5.817 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[21] ; CLK_DIV:clkgen|CLK_1Khz ; 5.297 ; 5.436 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+; GPIO_0[*]   ; KEY[2]                  ; 6.193 ; 6.154 ; Rise       ; KEY[2]                  ;
+;  GPIO_0[11] ; KEY[2]                  ; 6.193 ; 6.154 ; Rise       ; KEY[2]                  ;
+;  GPIO_0[13] ; KEY[2]                  ; 6.818 ; 6.764 ; Rise       ; KEY[2]                  ;
+;  GPIO_0[19] ; KEY[2]                  ; 6.650 ; 6.556 ; Rise       ; KEY[2]                  ;
+; GPIO_1[*]   ; KEY[2]                  ; 6.452 ; 6.400 ; Rise       ; KEY[2]                  ;
+;  GPIO_1[13] ; KEY[2]                  ; 6.452 ; 6.429 ; Rise       ; KEY[2]                  ;
+;  GPIO_1[15] ; KEY[2]                  ; 6.473 ; 6.400 ; Rise       ; KEY[2]                  ;
+;  GPIO_1[17] ; KEY[2]                  ; 6.624 ; 6.571 ; Rise       ; KEY[2]                  ;
++-------------+-------------------------+-------+-------+------------+-------------------------+
+
+
+---------------------------------------------
+; Slow 1200mV 0C Model Metastability Report ;
+---------------------------------------------
+No synchronizer chains to report.
+
+
++-------------------------------------------------+
+; Fast 1200mV 0C Model Setup Summary              ;
++-------------------------+-------+---------------+
+; Clock                   ; Slack ; End Point TNS ;
++-------------------------+-------+---------------+
+; CLOCK_50                ; 0.291 ; 0.000         ;
+; KEY[2]                  ; 0.359 ; 0.000         ;
+; CLK_DIV:clkgen|CLK_1Khz ; 0.372 ; 0.000         ;
++-------------------------+-------+---------------+
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Hold Summary                ;
++-------------------------+--------+---------------+
+; Clock                   ; Slack  ; End Point TNS ;
++-------------------------+--------+---------------+
+; CLOCK_50                ; -0.108 ; -0.108        ;
+; KEY[2]                  ; 0.141  ; 0.000         ;
+; CLK_DIV:clkgen|CLK_1Khz ; 0.187  ; 0.000         ;
++-------------------------+--------+---------------+
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
++-------------------------+--------+---------------+
+; Clock                   ; Slack  ; End Point TNS ;
++-------------------------+--------+---------------+
+; KEY[2]                  ; -3.000 ; -6.516        ;
+; CLOCK_50                ; -3.000 ; -4.044        ;
+; CLK_DIV:clkgen|CLK_1Khz ; -1.000 ; -5.000        ;
++-------------------------+--------+---------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'CLOCK_50'                                                                                                     ;
++-------+-------------------------+-------------------------+-------------------------+-------------+--------------+------------+------------+
+; Slack ; From Node               ; To Node                 ; Launch Clock            ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------+-------------------------+-------------------------+-------------+--------------+------------+------------+
+; 0.291 ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; CLOCK_50    ; 0.500        ; 0.917      ; 1.208      ;
+; 0.797 ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; CLOCK_50    ; 1.000        ; 0.917      ; 1.202      ;
++-------+-------------------------+-------------------------+-------------------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'KEY[2]'                                                                                ;
++-------+-------------+--------------+-------------------------+-------------+--------------+------------+------------+
+; Slack ; From Node   ; To Node      ; Launch Clock            ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------+--------------+-------------------------+-------------+--------------+------------+------------+
+; 0.359 ; SCANLINE[0] ; selrandom[0] ; CLK_DIV:clkgen|CLK_1Khz ; KEY[2]      ; 1.000        ; 0.320      ; 0.938      ;
+; 0.376 ; random[2]   ; selrandom[2] ; CLK_DIV:clkgen|CLK_1Khz ; KEY[2]      ; 1.000        ; 0.320      ; 0.921      ;
+; 0.504 ; random[1]   ; selrandom[1] ; CLK_DIV:clkgen|CLK_1Khz ; KEY[2]      ; 1.000        ; 0.320      ; 0.793      ;
++-------+-------------+--------------+-------------------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'CLK_DIV:clkgen|CLK_1Khz'                                                                          ;
++-------+-------------+-------------+-------------------------+-------------------------+--------------+------------+------------+
+; Slack ; From Node   ; To Node     ; Launch Clock            ; Latch Clock             ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------+-------------+-------------------------+-------------------------+--------------+------------+------------+
+; 0.372 ; SCANLINE[0] ; random[1]   ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 1.000        ; -0.036     ; 0.579      ;
+; 0.394 ; SCANLINE[0] ; random[2]   ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 1.000        ; -0.036     ; 0.557      ;
+; 0.428 ; SCANLINE[1] ; SCANLINE[2] ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 1.000        ; -0.036     ; 0.523      ;
+; 0.533 ; SCANLINE[0] ; SCANLINE[1] ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 1.000        ; -0.036     ; 0.418      ;
+; 0.533 ; SCANLINE[0] ; SCANLINE[2] ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 1.000        ; -0.036     ; 0.418      ;
+; 0.564 ; random[1]   ; random[2]   ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 1.000        ; -0.036     ; 0.387      ;
+; 0.569 ; random[2]   ; random[1]   ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 1.000        ; -0.036     ; 0.382      ;
+; 0.592 ; SCANLINE[0] ; SCANLINE[0] ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 1.000        ; -0.036     ; 0.359      ;
+; 0.592 ; random[1]   ; random[1]   ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 1.000        ; -0.036     ; 0.359      ;
+; 0.592 ; SCANLINE[2] ; SCANLINE[2] ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 1.000        ; -0.036     ; 0.359      ;
+; 0.592 ; random[2]   ; random[2]   ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 1.000        ; -0.036     ; 0.359      ;
+; 0.592 ; SCANLINE[1] ; SCANLINE[1] ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 1.000        ; -0.036     ; 0.359      ;
++-------+-------------+-------------+-------------------------+-------------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'CLOCK_50'                                                                                                       ;
++--------+-------------------------+-------------------------+-------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node               ; To Node                 ; Launch Clock            ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------+-------------------------+-------------------------+-------------+--------------+------------+------------+
+; -0.108 ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; CLOCK_50    ; 0.000        ; 0.948      ; 1.059      ;
+; 0.416  ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; CLOCK_50    ; -0.500       ; 0.948      ; 1.083      ;
++--------+-------------------------+-------------------------+-------------------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'KEY[2]'                                                                                 ;
++-------+-------------+--------------+-------------------------+-------------+--------------+------------+------------+
+; Slack ; From Node   ; To Node      ; Launch Clock            ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------+--------------+-------------------------+-------------+--------------+------------+------------+
+; 0.141 ; random[1]   ; selrandom[1] ; CLK_DIV:clkgen|CLK_1Khz ; KEY[2]      ; 0.000        ; 0.440      ; 0.695      ;
+; 0.205 ; random[2]   ; selrandom[2] ; CLK_DIV:clkgen|CLK_1Khz ; KEY[2]      ; 0.000        ; 0.440      ; 0.759      ;
+; 0.221 ; SCANLINE[0] ; selrandom[0] ; CLK_DIV:clkgen|CLK_1Khz ; KEY[2]      ; 0.000        ; 0.440      ; 0.775      ;
++-------+-------------+--------------+-------------------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'CLK_DIV:clkgen|CLK_1Khz'                                                                           ;
++-------+-------------+-------------+-------------------------+-------------------------+--------------+------------+------------+
+; Slack ; From Node   ; To Node     ; Launch Clock            ; Latch Clock             ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------+-------------+-------------------------+-------------------------+--------------+------------+------------+
+; 0.187 ; random[2]   ; random[2]   ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; random[1]   ; random[1]   ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; SCANLINE[2] ; SCANLINE[2] ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; SCANLINE[1] ; SCANLINE[1] ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 0.000        ; 0.036      ; 0.307      ;
+; 0.194 ; SCANLINE[0] ; SCANLINE[0] ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 0.000        ; 0.036      ; 0.314      ;
+; 0.207 ; random[1]   ; random[2]   ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 0.000        ; 0.036      ; 0.327      ;
+; 0.211 ; random[2]   ; random[1]   ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 0.000        ; 0.036      ; 0.331      ;
+; 0.230 ; SCANLINE[0] ; SCANLINE[2] ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 0.000        ; 0.036      ; 0.350      ;
+; 0.233 ; SCANLINE[0] ; SCANLINE[1] ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 0.000        ; 0.036      ; 0.353      ;
+; 0.307 ; SCANLINE[1] ; SCANLINE[2] ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 0.000        ; 0.036      ; 0.427      ;
+; 0.342 ; SCANLINE[0] ; random[2]   ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 0.000        ; 0.036      ; 0.462      ;
+; 0.342 ; SCANLINE[0] ; random[1]   ; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 0.000        ; 0.036      ; 0.462      ;
++-------+-------------+-------------+-------------------------+-------------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width: 'KEY[2]'                                                 ;
++--------+--------------+----------------+------------------+--------+------------+------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target           ;
++--------+--------------+----------------+------------------+--------+------------+------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate        ; KEY[2] ; Rise       ; KEY[2]           ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; selrandom[0]     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; selrandom[1]     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; selrandom[2]     ;
+; -0.172 ; 0.012        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; selrandom[0]     ;
+; -0.172 ; 0.012        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; selrandom[1]     ;
+; -0.172 ; 0.012        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; selrandom[2]     ;
+; 0.008  ; 0.008        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; selrandom[0]|clk ;
+; 0.008  ; 0.008        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; selrandom[1]|clk ;
+; 0.008  ; 0.008        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; selrandom[2]|clk ;
+; 0.118  ; 0.118        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; KEY[2]~input|o   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; KEY[2]~input|i   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; KEY[2]~input|i   ;
+; 0.767  ; 0.983        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; selrandom[0]     ;
+; 0.767  ; 0.983        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; selrandom[1]     ;
+; 0.767  ; 0.983        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; selrandom[2]     ;
+; 0.882  ; 0.882        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; KEY[2]~input|o   ;
+; 0.989  ; 0.989        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; selrandom[0]|clk ;
+; 0.989  ; 0.989        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; selrandom[1]|clk ;
+; 0.989  ; 0.989        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; selrandom[2]|clk ;
++--------+--------------+----------------+------------------+--------+------------+------------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width: 'CLOCK_50'                                                        ;
++--------+--------------+----------------+------------------+----------+------------+-------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock    ; Clock Edge ; Target                  ;
++--------+--------------+----------------+------------------+----------+------------+-------------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate        ; CLOCK_50 ; Rise       ; CLOCK_50                ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; CLOCK_50 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+; -0.044 ; 0.140        ; 0.184          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+; 0.118  ; 0.118        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; CLOCK_50~input|o        ;
+; 0.135  ; 0.135        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; clkgen|CLK_1Khz|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; CLOCK_50~input|i        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; CLOCK_50~input|i        ;
+; 0.643  ; 0.859        ; 0.216          ; High Pulse Width ; CLOCK_50 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+; 0.864  ; 0.864        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; clkgen|CLK_1Khz|clk     ;
+; 0.882  ; 0.882        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; CLOCK_50~input|o        ;
++--------+--------------+----------------+------------------+----------+------------+-------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width: 'CLK_DIV:clkgen|CLK_1Khz'                                                                 ;
++--------+--------------+----------------+------------------+-------------------------+------------+----------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock                   ; Clock Edge ; Target                           ;
++--------+--------------+----------------+------------------+-------------------------+------------+----------------------------------+
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; SCANLINE[0]                      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; SCANLINE[1]                      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; SCANLINE[2]                      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; random[1]                        ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; random[2]                        ;
+; 0.282  ; 0.466        ; 0.184          ; Low Pulse Width  ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; SCANLINE[0]                      ;
+; 0.282  ; 0.466        ; 0.184          ; Low Pulse Width  ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; SCANLINE[1]                      ;
+; 0.282  ; 0.466        ; 0.184          ; Low Pulse Width  ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; SCANLINE[2]                      ;
+; 0.282  ; 0.466        ; 0.184          ; Low Pulse Width  ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; random[1]                        ;
+; 0.282  ; 0.466        ; 0.184          ; Low Pulse Width  ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; random[2]                        ;
+; 0.315  ; 0.531        ; 0.216          ; High Pulse Width ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; SCANLINE[0]                      ;
+; 0.315  ; 0.531        ; 0.216          ; High Pulse Width ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; SCANLINE[1]                      ;
+; 0.315  ; 0.531        ; 0.216          ; High Pulse Width ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; SCANLINE[2]                      ;
+; 0.315  ; 0.531        ; 0.216          ; High Pulse Width ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; random[1]                        ;
+; 0.315  ; 0.531        ; 0.216          ; High Pulse Width ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; random[2]                        ;
+; 0.462  ; 0.462        ; 0.000          ; Low Pulse Width  ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; SCANLINE[0]|clk                  ;
+; 0.462  ; 0.462        ; 0.000          ; Low Pulse Width  ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; SCANLINE[1]|clk                  ;
+; 0.462  ; 0.462        ; 0.000          ; Low Pulse Width  ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; SCANLINE[2]|clk                  ;
+; 0.462  ; 0.462        ; 0.000          ; Low Pulse Width  ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; random[1]|clk                    ;
+; 0.462  ; 0.462        ; 0.000          ; Low Pulse Width  ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; random[2]|clk                    ;
+; 0.471  ; 0.471        ; 0.000          ; Low Pulse Width  ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; clkgen|CLK_1Khz~clkctrl|inclk[0] ;
+; 0.471  ; 0.471        ; 0.000          ; Low Pulse Width  ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; clkgen|CLK_1Khz~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; clkgen|CLK_1Khz|q                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; clkgen|CLK_1Khz|q                ;
+; 0.528  ; 0.528        ; 0.000          ; High Pulse Width ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; clkgen|CLK_1Khz~clkctrl|inclk[0] ;
+; 0.528  ; 0.528        ; 0.000          ; High Pulse Width ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; clkgen|CLK_1Khz~clkctrl|outclk   ;
+; 0.537  ; 0.537        ; 0.000          ; High Pulse Width ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; SCANLINE[0]|clk                  ;
+; 0.537  ; 0.537        ; 0.000          ; High Pulse Width ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; SCANLINE[1]|clk                  ;
+; 0.537  ; 0.537        ; 0.000          ; High Pulse Width ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; SCANLINE[2]|clk                  ;
+; 0.537  ; 0.537        ; 0.000          ; High Pulse Width ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; random[1]|clk                    ;
+; 0.537  ; 0.537        ; 0.000          ; High Pulse Width ; CLK_DIV:clkgen|CLK_1Khz ; Rise       ; random[2]|clk                    ;
++--------+--------------+----------------+------------------+-------------------------+------------+----------------------------------+
+
+
++----------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                        ;
++-------------+-------------------------+-------+-------+------------+-------------------------+
+; Data Port   ; Clock Port              ; Rise  ; Fall  ; Clock Edge ; Clock Reference         ;
++-------------+-------------------------+-------+-------+------------+-------------------------+
+; GPIO_0[*]   ; CLK_DIV:clkgen|CLK_1Khz ; 4.184 ; 4.322 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_0[9]  ; CLK_DIV:clkgen|CLK_1Khz ; 3.668 ; 3.709 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_0[11] ; CLK_DIV:clkgen|CLK_1Khz ; 3.683 ; 3.742 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_0[13] ; CLK_DIV:clkgen|CLK_1Khz ; 4.184 ; 4.322 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_0[14] ; CLK_DIV:clkgen|CLK_1Khz ; 4.034 ; 4.028 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_0[17] ; CLK_DIV:clkgen|CLK_1Khz ; 3.899 ; 3.759 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_0[19] ; CLK_DIV:clkgen|CLK_1Khz ; 4.046 ; 4.141 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+; GPIO_1[*]   ; CLK_DIV:clkgen|CLK_1Khz ; 4.283 ; 4.339 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[9]  ; CLK_DIV:clkgen|CLK_1Khz ; 3.831 ; 3.820 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[11] ; CLK_DIV:clkgen|CLK_1Khz ; 3.778 ; 3.650 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[13] ; CLK_DIV:clkgen|CLK_1Khz ; 3.854 ; 3.934 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[14] ; CLK_DIV:clkgen|CLK_1Khz ; 3.717 ; 3.594 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[15] ; CLK_DIV:clkgen|CLK_1Khz ; 4.153 ; 4.204 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[17] ; CLK_DIV:clkgen|CLK_1Khz ; 4.283 ; 4.339 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[19] ; CLK_DIV:clkgen|CLK_1Khz ; 3.923 ; 3.917 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[21] ; CLK_DIV:clkgen|CLK_1Khz ; 3.658 ; 3.675 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+; GPIO_0[*]   ; KEY[2]                  ; 4.664 ; 4.899 ; Rise       ; KEY[2]                  ;
+;  GPIO_0[11] ; KEY[2]                  ; 3.879 ; 4.001 ; Rise       ; KEY[2]                  ;
+;  GPIO_0[13] ; KEY[2]                  ; 4.664 ; 4.899 ; Rise       ; KEY[2]                  ;
+;  GPIO_0[19] ; KEY[2]                  ; 4.526 ; 4.718 ; Rise       ; KEY[2]                  ;
+; GPIO_1[*]   ; KEY[2]                  ; 4.710 ; 4.930 ; Rise       ; KEY[2]                  ;
+;  GPIO_1[13] ; KEY[2]                  ; 4.050 ; 4.193 ; Rise       ; KEY[2]                  ;
+;  GPIO_1[15] ; KEY[2]                  ; 4.580 ; 4.795 ; Rise       ; KEY[2]                  ;
+;  GPIO_1[17] ; KEY[2]                  ; 4.710 ; 4.930 ; Rise       ; KEY[2]                  ;
++-------------+-------------------------+-------+-------+------------+-------------------------+
+
+
++----------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                ;
++-------------+-------------------------+-------+-------+------------+-------------------------+
+; Data Port   ; Clock Port              ; Rise  ; Fall  ; Clock Edge ; Clock Reference         ;
++-------------+-------------------------+-------+-------+------------+-------------------------+
+; GPIO_0[*]   ; CLK_DIV:clkgen|CLK_1Khz ; 3.385 ; 3.399 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_0[9]  ; CLK_DIV:clkgen|CLK_1Khz ; 3.385 ; 3.399 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_0[11] ; CLK_DIV:clkgen|CLK_1Khz ; 3.388 ; 3.432 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_0[13] ; CLK_DIV:clkgen|CLK_1Khz ; 3.599 ; 3.685 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_0[14] ; CLK_DIV:clkgen|CLK_1Khz ; 3.827 ; 3.674 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_0[17] ; CLK_DIV:clkgen|CLK_1Khz ; 3.579 ; 3.575 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_0[19] ; CLK_DIV:clkgen|CLK_1Khz ; 3.465 ; 3.508 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+; GPIO_1[*]   ; CLK_DIV:clkgen|CLK_1Khz ; 3.410 ; 3.362 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[9]  ; CLK_DIV:clkgen|CLK_1Khz ; 3.636 ; 3.520 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[11] ; CLK_DIV:clkgen|CLK_1Khz ; 3.473 ; 3.451 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[13] ; CLK_DIV:clkgen|CLK_1Khz ; 3.552 ; 3.617 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[14] ; CLK_DIV:clkgen|CLK_1Khz ; 3.462 ; 3.362 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[15] ; CLK_DIV:clkgen|CLK_1Khz ; 3.518 ; 3.583 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[17] ; CLK_DIV:clkgen|CLK_1Khz ; 3.643 ; 3.713 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[19] ; CLK_DIV:clkgen|CLK_1Khz ; 3.739 ; 3.614 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[21] ; CLK_DIV:clkgen|CLK_1Khz ; 3.410 ; 3.399 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+; GPIO_0[*]   ; KEY[2]                  ; 3.768 ; 3.867 ; Rise       ; KEY[2]                  ;
+;  GPIO_0[11] ; KEY[2]                  ; 3.768 ; 3.867 ; Rise       ; KEY[2]                  ;
+;  GPIO_0[13] ; KEY[2]                  ; 4.155 ; 4.276 ; Rise       ; KEY[2]                  ;
+;  GPIO_0[19] ; KEY[2]                  ; 4.021 ; 4.099 ; Rise       ; KEY[2]                  ;
+; GPIO_1[*]   ; KEY[2]                  ; 3.922 ; 4.021 ; Rise       ; KEY[2]                  ;
+;  GPIO_1[13] ; KEY[2]                  ; 3.932 ; 4.052 ; Rise       ; KEY[2]                  ;
+;  GPIO_1[15] ; KEY[2]                  ; 3.922 ; 4.021 ; Rise       ; KEY[2]                  ;
+;  GPIO_1[17] ; KEY[2]                  ; 4.047 ; 4.151 ; Rise       ; KEY[2]                  ;
++-------------+-------------------------+-------+-------+------------+-------------------------+
+
+
+---------------------------------------------
+; Fast 1200mV 0C Model Metastability Report ;
+---------------------------------------------
+No synchronizer chains to report.
+
+
++---------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                   ;
++--------------------------+--------+--------+----------+---------+---------------------+
+; Clock                    ; Setup  ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++--------------------------+--------+--------+----------+---------+---------------------+
+; Worst-case Slack         ; -0.115 ; -0.183 ; N/A      ; N/A     ; -3.000              ;
+;  CLK_DIV:clkgen|CLK_1Khz ; -0.115 ; 0.187  ; N/A      ; N/A     ; -1.000              ;
+;  CLOCK_50                ; 0.102  ; -0.183 ; N/A      ; N/A     ; -3.000              ;
+;  KEY[2]                  ; -0.036 ; 0.141  ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS          ; -0.247 ; -0.183 ; 0.0      ; 0.0     ; -15.56              ;
+;  CLK_DIV:clkgen|CLK_1Khz ; -0.211 ; 0.000  ; N/A      ; N/A     ; -5.000              ;
+;  CLOCK_50                ; 0.000  ; -0.183 ; N/A      ; N/A     ; -4.044              ;
+;  KEY[2]                  ; -0.036 ; 0.000  ; N/A      ; N/A     ; -6.516              ;
++--------------------------+--------+--------+----------+---------+---------------------+
+
+
++----------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                        ;
++-------------+-------------------------+-------+-------+------------+-------------------------+
+; Data Port   ; Clock Port              ; Rise  ; Fall  ; Clock Edge ; Clock Reference         ;
++-------------+-------------------------+-------+-------+------------+-------------------------+
+; GPIO_0[*]   ; CLK_DIV:clkgen|CLK_1Khz ; 7.105 ; 7.146 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_0[9]  ; CLK_DIV:clkgen|CLK_1Khz ; 6.167 ; 6.262 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_0[11] ; CLK_DIV:clkgen|CLK_1Khz ; 6.227 ; 6.195 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_0[13] ; CLK_DIV:clkgen|CLK_1Khz ; 7.105 ; 7.146 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_0[14] ; CLK_DIV:clkgen|CLK_1Khz ; 6.695 ; 6.804 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_0[17] ; CLK_DIV:clkgen|CLK_1Khz ; 6.486 ; 6.441 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_0[19] ; CLK_DIV:clkgen|CLK_1Khz ; 6.927 ; 6.914 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+; GPIO_1[*]   ; CLK_DIV:clkgen|CLK_1Khz ; 7.268 ; 7.217 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[9]  ; CLK_DIV:clkgen|CLK_1Khz ; 6.362 ; 6.499 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[11] ; CLK_DIV:clkgen|CLK_1Khz ; 6.281 ; 6.246 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[13] ; CLK_DIV:clkgen|CLK_1Khz ; 6.526 ; 6.525 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[14] ; CLK_DIV:clkgen|CLK_1Khz ; 6.153 ; 6.164 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[15] ; CLK_DIV:clkgen|CLK_1Khz ; 7.108 ; 7.039 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[17] ; CLK_DIV:clkgen|CLK_1Khz ; 7.268 ; 7.217 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[19] ; CLK_DIV:clkgen|CLK_1Khz ; 6.523 ; 6.686 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[21] ; CLK_DIV:clkgen|CLK_1Khz ; 6.115 ; 6.240 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+; GPIO_0[*]   ; KEY[2]                  ; 8.108 ; 8.222 ; Rise       ; KEY[2]                  ;
+;  GPIO_0[11] ; KEY[2]                  ; 6.680 ; 6.712 ; Rise       ; KEY[2]                  ;
+;  GPIO_0[13] ; KEY[2]                  ; 8.108 ; 8.222 ; Rise       ; KEY[2]                  ;
+;  GPIO_0[19] ; KEY[2]                  ; 7.930 ; 7.990 ; Rise       ; KEY[2]                  ;
+; GPIO_1[*]   ; KEY[2]                  ; 8.195 ; 8.279 ; Rise       ; KEY[2]                  ;
+;  GPIO_1[13] ; KEY[2]                  ; 6.979 ; 7.042 ; Rise       ; KEY[2]                  ;
+;  GPIO_1[15] ; KEY[2]                  ; 8.035 ; 8.101 ; Rise       ; KEY[2]                  ;
+;  GPIO_1[17] ; KEY[2]                  ; 8.195 ; 8.279 ; Rise       ; KEY[2]                  ;
++-------------+-------------------------+-------+-------+------------+-------------------------+
+
+
++----------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                ;
++-------------+-------------------------+-------+-------+------------+-------------------------+
+; Data Port   ; Clock Port              ; Rise  ; Fall  ; Clock Edge ; Clock Reference         ;
++-------------+-------------------------+-------+-------+------------+-------------------------+
+; GPIO_0[*]   ; CLK_DIV:clkgen|CLK_1Khz ; 3.385 ; 3.399 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_0[9]  ; CLK_DIV:clkgen|CLK_1Khz ; 3.385 ; 3.399 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_0[11] ; CLK_DIV:clkgen|CLK_1Khz ; 3.388 ; 3.432 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_0[13] ; CLK_DIV:clkgen|CLK_1Khz ; 3.599 ; 3.685 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_0[14] ; CLK_DIV:clkgen|CLK_1Khz ; 3.827 ; 3.674 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_0[17] ; CLK_DIV:clkgen|CLK_1Khz ; 3.579 ; 3.575 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_0[19] ; CLK_DIV:clkgen|CLK_1Khz ; 3.465 ; 3.508 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+; GPIO_1[*]   ; CLK_DIV:clkgen|CLK_1Khz ; 3.410 ; 3.362 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[9]  ; CLK_DIV:clkgen|CLK_1Khz ; 3.636 ; 3.520 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[11] ; CLK_DIV:clkgen|CLK_1Khz ; 3.473 ; 3.451 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[13] ; CLK_DIV:clkgen|CLK_1Khz ; 3.552 ; 3.617 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[14] ; CLK_DIV:clkgen|CLK_1Khz ; 3.462 ; 3.362 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[15] ; CLK_DIV:clkgen|CLK_1Khz ; 3.518 ; 3.583 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[17] ; CLK_DIV:clkgen|CLK_1Khz ; 3.643 ; 3.713 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[19] ; CLK_DIV:clkgen|CLK_1Khz ; 3.739 ; 3.614 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+;  GPIO_1[21] ; CLK_DIV:clkgen|CLK_1Khz ; 3.410 ; 3.399 ; Rise       ; CLK_DIV:clkgen|CLK_1Khz ;
+; GPIO_0[*]   ; KEY[2]                  ; 3.768 ; 3.867 ; Rise       ; KEY[2]                  ;
+;  GPIO_0[11] ; KEY[2]                  ; 3.768 ; 3.867 ; Rise       ; KEY[2]                  ;
+;  GPIO_0[13] ; KEY[2]                  ; 4.155 ; 4.276 ; Rise       ; KEY[2]                  ;
+;  GPIO_0[19] ; KEY[2]                  ; 4.021 ; 4.099 ; Rise       ; KEY[2]                  ;
+; GPIO_1[*]   ; KEY[2]                  ; 3.922 ; 4.021 ; Rise       ; KEY[2]                  ;
+;  GPIO_1[13] ; KEY[2]                  ; 3.932 ; 4.052 ; Rise       ; KEY[2]                  ;
+;  GPIO_1[15] ; KEY[2]                  ; 3.922 ; 4.021 ; Rise       ; KEY[2]                  ;
+;  GPIO_1[17] ; KEY[2]                  ; 4.047 ; 4.151 ; Rise       ; KEY[2]                  ;
++-------------+-------------------------+-------+-------+------------+-------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; GPIO_0[9]     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; GPIO_0[10]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; GPIO_0[11]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; GPIO_0[12]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; GPIO_0[13]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; GPIO_0[14]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; GPIO_0[15]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; GPIO_0[16]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; GPIO_0[17]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; GPIO_0[18]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; GPIO_0[19]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; GPIO_0[20]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; GPIO_0[21]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; GPIO_1[9]     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; GPIO_1[10]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; GPIO_1[11]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; GPIO_1[12]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; GPIO_1[13]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; GPIO_1[14]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; GPIO_1[15]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; GPIO_1[16]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; GPIO_1[17]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; GPIO_1[18]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; GPIO_1[19]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; GPIO_1[20]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; GPIO_1[21]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; KEY[1]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; KEY[2]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; CLOCK_50                ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Corner Signal Integrity Metrics                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; GPIO_0[9]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; GPIO_0[10]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; GPIO_0[11]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; GPIO_0[12]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; GPIO_0[13]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; GPIO_0[14]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; GPIO_0[15]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; GPIO_0[16]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; GPIO_0[17]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; GPIO_0[18]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; GPIO_0[19]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; GPIO_0[20]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; GPIO_0[21]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; GPIO_1[9]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; GPIO_1[10]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; GPIO_1[11]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; GPIO_1[12]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; GPIO_1[13]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; GPIO_1[14]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; GPIO_1[15]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; GPIO_1[16]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; GPIO_1[17]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; GPIO_1[18]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; GPIO_1[19]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; GPIO_1[20]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; GPIO_1[21]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.68e-07 V                   ; 2.35 V              ; -0.0132 V           ; 0.2 V                                ; 0.027 V                              ; 5.26e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 5.68e-07 V                  ; 2.35 V             ; -0.0132 V          ; 0.2 V                               ; 0.027 V                             ; 5.26e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Corner Signal Integrity Metrics                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; GPIO_0[9]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; GPIO_0[10]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; GPIO_0[11]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; GPIO_0[12]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; GPIO_0[13]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; GPIO_0[14]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; GPIO_0[15]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; GPIO_0[16]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; GPIO_0[17]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; GPIO_0[18]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; GPIO_0[19]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; GPIO_0[20]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; GPIO_0[21]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; GPIO_1[9]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; GPIO_1[10]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; GPIO_1[11]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; GPIO_1[12]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; GPIO_1[13]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; GPIO_1[14]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; GPIO_1[15]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; GPIO_1[16]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; GPIO_1[17]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; GPIO_1[18]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; GPIO_1[19]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; GPIO_1[20]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; GPIO_1[21]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.22e-08 V                   ; 2.72 V              ; -0.0747 V           ; 0.28 V                               ; 0.169 V                              ; 3.1e-10 s                   ; 3.01e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.22e-08 V                  ; 2.72 V             ; -0.0747 V          ; 0.28 V                              ; 0.169 V                             ; 3.1e-10 s                  ; 3.01e-10 s                 ; No                        ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-----------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                               ;
++-------------------------+-------------------------+----------+----------+----------+----------+
+; From Clock              ; To Clock                ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-------------------------+-------------------------+----------+----------+----------+----------+
+; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 12       ; 0        ; 0        ; 0        ;
+; CLK_DIV:clkgen|CLK_1Khz ; CLOCK_50                ; 1        ; 1        ; 0        ; 0        ;
+; CLK_DIV:clkgen|CLK_1Khz ; KEY[2]                  ; 3        ; 0        ; 0        ; 0        ;
++-------------------------+-------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-----------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                ;
++-------------------------+-------------------------+----------+----------+----------+----------+
+; From Clock              ; To Clock                ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-------------------------+-------------------------+----------+----------+----------+----------+
+; CLK_DIV:clkgen|CLK_1Khz ; CLK_DIV:clkgen|CLK_1Khz ; 12       ; 0        ; 0        ; 0        ;
+; CLK_DIV:clkgen|CLK_1Khz ; CLOCK_50                ; 1        ; 1        ; 0        ; 0        ;
+; CLK_DIV:clkgen|CLK_1Khz ; KEY[2]                  ; 3        ; 0        ; 0        ; 0        ;
++-------------------------+-------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 1     ; 1    ;
+; Unconstrained Input Port Paths  ; 8     ; 8    ;
+; Unconstrained Output Ports      ; 14    ; 14   ;
+; Unconstrained Output Port Paths ; 52    ; 52   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+    Info: Processing started: Sat Apr 27 11:24:46 2024
+Info: Command: quartus_sta Lab8_1 -c Lab8_1
+Info: qsta_default_script.tcl version: #1
+Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
+Info (21077): Core supply voltage is 1.2V
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'Lab8_1.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name CLK_DIV:clkgen|CLK_1Khz CLK_DIV:clkgen|CLK_1Khz
+    Info (332105): create_clock -period 1.000 -name CLOCK_50 CLOCK_50
+    Info (332105): create_clock -period 1.000 -name KEY[2] KEY[2]
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -0.115
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.115              -0.211 CLK_DIV:clkgen|CLK_1Khz 
+    Info (332119):    -0.036              -0.036 KEY[2] 
+    Info (332119):     0.102               0.000 CLOCK_50 
+Info (332146): Worst-case hold slack is -0.125
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.125              -0.125 CLOCK_50 
+    Info (332119):     0.301               0.000 KEY[2] 
+    Info (332119):     0.359               0.000 CLK_DIV:clkgen|CLK_1Khz 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000              -6.000 KEY[2] 
+    Info (332119):    -3.000              -4.000 CLOCK_50 
+    Info (332119):    -1.000              -5.000 CLK_DIV:clkgen|CLK_1Khz 
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Info (332146): Worst-case setup slack is 0.001
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.001               0.000 CLK_DIV:clkgen|CLK_1Khz 
+    Info (332119):     0.201               0.000 CLOCK_50 
+    Info (332119):     0.220               0.000 KEY[2] 
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case hold slack is -0.183
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.183              -0.183 CLOCK_50 
+    Info (332119):     0.153               0.000 KEY[2] 
+    Info (332119):     0.311               0.000 CLK_DIV:clkgen|CLK_1Khz 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000              -6.000 KEY[2] 
+    Info (332119):    -3.000              -4.000 CLOCK_50 
+    Info (332119):    -1.000              -5.000 CLK_DIV:clkgen|CLK_1Khz 
+Info: Analyzing Fast 1200mV 0C Model
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Info (332146): Worst-case setup slack is 0.291
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.291               0.000 CLOCK_50 
+    Info (332119):     0.359               0.000 KEY[2] 
+    Info (332119):     0.372               0.000 CLK_DIV:clkgen|CLK_1Khz 
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case hold slack is -0.108
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.108              -0.108 CLOCK_50 
+    Info (332119):     0.141               0.000 KEY[2] 
+    Info (332119):     0.187               0.000 CLK_DIV:clkgen|CLK_1Khz 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000              -6.516 KEY[2] 
+    Info (332119):    -3.000              -4.044 CLOCK_50 
+    Info (332119):    -1.000              -5.000 CLK_DIV:clkgen|CLK_1Khz 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4671 megabytes
+    Info: Processing ended: Sat Apr 27 11:24:48 2024
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+

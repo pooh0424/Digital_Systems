@@ -1,0 +1,23 @@
+|Lab9_1
+KEY[1] => l_state[0].ACLR
+KEY[1] => l_state[1].ACLR
+KEY[1] => l_state[2].ACLR
+KEY[2] => l_state[0].CLK
+KEY[2] => l_state[1].CLK
+KEY[2] => l_state[2].CLK
+SW[0] => Mux0.IN7
+SW[0] => Mux1.IN7
+SW[0] => Mux2.IN4
+SW[0] => Mux2.IN5
+SW[0] => Mux2.IN6
+SW[0] => Mux2.IN7
+SW[0] => Mux1.IN4
+SW[0] => Mux1.IN5
+SW[0] => Mux1.IN6
+LEDG[5] <= l_state[0].DB_MAX_OUTPUT_PORT_TYPE
+LEDG[6] <= l_state[1].DB_MAX_OUTPUT_PORT_TYPE
+LEDG[7] <= l_state[2].DB_MAX_OUTPUT_PORT_TYPE
+LEDG[8] <= <GND>
+LEDG[9] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
