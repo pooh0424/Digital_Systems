@@ -1,0 +1,223 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+
+entity Lab10_1 is 
+port(	CLOCK_50:in std_logic;
+		KEY:in std_logic_vector(2 downto 1);
+		GPIO_0:out std_logic_vector(21 downto 9);      -- connect to lcd pin8 to pin1
+		GPIO_1:out std_logic_vector(21 downto 9) );    -- connect to lcd pin16 to pin9  
+end Lab10_1;
+
+architecture arch of Lab10_1 is
+component CLK_GEN is
+	generic( divisor: integer );
+		port 
+		(	
+			clock_in				: IN	STD_LOGIC;
+			clock_out			: OUT	STD_LOGIC); 
+	end component;
+signal RESET,show:std_logic;
+
+signal INIT_CLK:std_logic;
+signal COUNTER:integer range 0 to 41;
+TYPE DDRAM IS ARRAY(0 to 15) OF std_logic_vector(7 downto 0);
+signal LINE1:DDRAM;
+signal LINE2:DDRAM;
+signal CLK_500hz:std_logic; 
+signal LCM_RS, LCM_RW, LCM_EN :std_logic;
+signal LCM_DB:std_logic_vector(7 downto 0);
+
+begin
+CLK_U1: CLK_GEN generic map(divisor => 100_000) port map(CLOCK_50, CLK_500hz);
+RESET<=KEY(1);
+SHOW<=KEY(2);
+INIT_CLK<= CLK_500hz;
+LCM_EN<=INIT_CLK;
+process(INIT_CLK,reset)
+begin
+	if(reset='0') then 
+		couNTER<=0;
+	elsif INIT_CLK'event and INIT_CLK='1' then
+		if COUNTER>=41 then
+			COUNTER<=8;
+		else
+			COUNTER<=COUNTER+1;
+		end if;
+   end if;
+end process;
+process(reset,show)
+begin
+	if(reset='0') then 
+		LINE1(0 to 15)<=(others =>"00100000");
+		LINE2(0 to 15)<=(others =>"00100000");
+	elsif (show'event and show='0') then
+		LINE1(0) <="01001001";				--I
+		LINE1(1) <="01000101";				--E
+		LINE1(2) <="01000011";				--C
+		LINE1(3) <="01010011";				--S
+		LINE1(4) <="00100000";				-- 
+		LINE1(5) <="01000100";				--D
+		LINE1(6) <="01101001";				--i
+		LINE1(7) <="01100111";				--g
+		LINE1(8) <="01101001";				--i
+		LINE1(9) <="01110100";				--t
+		LINE1(10)<="01100001";				--a
+		LINE1(11)<="01101100";				--l
+		LINE1(12)<="00101110";				--.
+		LINE1(13)<="00101110";				--.
+		LINE1(14)<="00101110";				--.
+		LINE1(15)<="00101110";				--.
+		LINE2(0) <="01010011";				--S
+		LINE2(1) <="01111001";				--y
+		LINE2(2) <="01110011";				--s
+		LINE2(3) <="01110100";				--t
+		LINE2(4) <="01100101";				--e
+		LINE2(5) <="01101101";				--m
+		LINE2(6) <="00100000";				-- 
+		LINE2(7) <="01000100";				--D
+		LINE2(8) <="01100101";				--e
+		LINE2(9) <="01110011";				--s
+		LINE2(10)<="01101001";				--i
+		LINE2(11)<="01100111";				--g
+		LINE2(12)<="01101110";				--n
+		LINE2(13)<="00101110";				--.
+		LINE2(14)<="00101110";				--.
+		LINE2(15)<="00101110";				--.
+	end if;
+end process;
+--displayt circuit
+process(INIT_CLK)
+begin
+	if(INIT_CLK'event and INIT_CLK='0') then	
+		case COUNTER is
+			when 0 to 3=>
+				LCM_RS<='0';
+				LCM_RW<='0';
+				LCM_DB<="00111000";		--function set
+			when 4=>
+				LCM_DB<="00001000";		--off screen
+			when 5=>
+				LCM_DB<="00000001";		--clear screen
+			when 6=>
+				LCM_DB<="00001100";		--on screen
+			when 7=>
+				LCM_DB<="00000110";		--entry mode set	
+			when 8=>
+				LCM_RS<='0';
+				LCM_DB<="10000000";		--set position 	
+			when 9=>
+				LCM_RS<='1';
+				LCM_DB<=LINE1(0);
+			when 10=>
+				LCM_DB<=LINE1(1);
+			when 11=>
+				LCM_DB<=LINE1(2);
+			when 12=>
+				LCM_DB<=LINE1(3);
+			when 13=>
+				LCM_DB<=LINE1(4);
+			when 14=>
+				LCM_DB<=LINE1(5);
+			when 15=>
+				LCM_DB<=LINE1(6);
+			when 16=>
+				LCM_DB<=LINE1(7);
+			when 17=>
+				LCM_DB<=LINE1(8);
+			when 18=>
+				LCM_DB<=LINE1(9);
+			when 19=>
+				LCM_DB<=LINE1(10);
+			when 20=>
+				LCM_DB<=LINE1(11);
+			when 21=>
+				LCM_DB<=LINE1(12);
+			when 22=>
+				LCM_DB<=LINE1(13);
+			when 23=>
+				LCM_DB<=LINE1(14);
+			when 24=>
+				LCM_DB<=LINE1(15);
+			when 25=>
+				LCM_RS<='0';			--set position
+				LCM_DB<="11000000";
+			when 26=>
+				LCM_RS<='1';
+				LCM_DB<=LINE2(0);
+			when 27=>
+				LCM_DB<=LINE2(1);
+			when 28=>
+				LCM_DB<=LINE2(2);
+			when 29=>
+				LCM_DB<=LINE2(3);
+			when 30=>
+				LCM_DB<=LINE2(4);
+			when 31=>
+				LCM_DB<=LINE2(5);
+			when 32=>
+				LCM_DB<=LINE2(6);
+			when 33=>
+				LCM_DB<=LINE2(7);
+			when 34=>
+				LCM_DB<=LINE2(8);
+			when 35=>
+				LCM_DB<=LINE2(9);
+			when 36=>
+				LCM_DB<=LINE2(10);
+			when 37=>
+				LCM_DB<=LINE2(11);
+			when 38=>
+				LCM_DB<=LINE2(12);
+			when 39=>
+				LCM_DB<=LINE2(13);
+			when 40=>
+				LCM_DB<=LINE2(14);
+			when 41=>
+				LCM_DB<=LINE2(15);
+		end case;
+	end if;
+end process;
+
+-- lcd pin3 to pin6
+	GPIO_0(13) <= '0';   GPIO_0(14) <= LCM_RS;  GPIO_0(15) <= LCM_RW;  GPIO_0(17) <= LCM_EN; 	  	 	
+-- lcd pin7 to pin14	(DB0 ~ DB7)
+	GPIO_0(19) <= LCM_DB(0);  GPIO_0(21) <= LCM_DB(1);  GPIO_1(9) <= LCM_DB(2);   GPIO_1(11) <= LCM_DB(3);
+	GPIO_1(13) <= LCM_DB(4);  GPIO_1(14) <= LCM_DB(5);  GPIO_1(15) <= LCM_DB(6);  GPIO_1(17) <= LCM_DB(7);
+-- lcd pin15 to pin16
+	GPIO_1(19) <= '1';     GPIO_1(21) <= '0';   -- turn on backlight
+	   
+end arch;
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+entity CLK_GEN is
+	generic( divisor: integer :=100_000);
+	port 
+	(	
+		clock_in				: IN	STD_LOGIC;
+		clock_out			: OUT	STD_LOGIC); 
+end CLK_GEN;
+
+architecture arch of CLK_GEN is
+	signal count: integer range 0 to divisor := 0;
+	signal CLK_out: STD_LOGIC;
+begin
+	
+	process(clock_in)
+	begin
+		IF clock_in'event and clock_in='1' THEN
+			IF count <  divisor/2-1 THEN
+				count <= count + 1;
+			ELSE
+				count <= 0;
+				CLK_out <= NOT CLK_out;
+			END IF;
+		END IF;
+		clock_out <= CLK_out;
+	end process;
+	
+end arch;
+

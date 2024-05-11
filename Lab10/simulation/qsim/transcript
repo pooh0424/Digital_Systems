@@ -1,0 +1,283 @@
+# do Lab10_1.do 
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Lab10_1
+# 
+# Top level modules:
+# 	Lab10_1
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Lab10_1_vlg_sample_tst
+# -- Compiling module Lab10_1_vlg_check_tst
+# ** Warning: Waveform1.vwf.vt(284): (vlog-2576) [BSOB] - Bit-select into 'GPIO_0_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(284): (vlog-2576) [BSOB] - Bit-select into 'GPIO_0_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(284): (vlog-2576) [BSOB] - Bit-select into 'GPIO_0_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(285): (vlog-2576) [BSOB] - Bit-select into 'GPIO_0_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(285): (vlog-2576) [BSOB] - Bit-select into 'last_GPIO_0_exp' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(294): (vlog-2576) [BSOB] - Bit-select into 'last_GPIO_0_exp' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(294): (vlog-2576) [BSOB] - Bit-select into 'GPIO_0_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(297): (vlog-2576) [BSOB] - Bit-select into 'GPIO_0_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(297): (vlog-2576) [BSOB] - Bit-select into 'GPIO_0_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(297): (vlog-2576) [BSOB] - Bit-select into 'GPIO_0_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(298): (vlog-2576) [BSOB] - Bit-select into 'GPIO_0_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(298): (vlog-2576) [BSOB] - Bit-select into 'last_GPIO_0_exp' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(307): (vlog-2576) [BSOB] - Bit-select into 'last_GPIO_0_exp' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(307): (vlog-2576) [BSOB] - Bit-select into 'GPIO_0_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(310): (vlog-2576) [BSOB] - Bit-select into 'GPIO_0_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(310): (vlog-2576) [BSOB] - Bit-select into 'GPIO_0_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(310): (vlog-2576) [BSOB] - Bit-select into 'GPIO_0_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(311): (vlog-2576) [BSOB] - Bit-select into 'GPIO_0_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(311): (vlog-2576) [BSOB] - Bit-select into 'last_GPIO_0_exp' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(320): (vlog-2576) [BSOB] - Bit-select into 'last_GPIO_0_exp' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(320): (vlog-2576) [BSOB] - Bit-select into 'GPIO_0_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(323): (vlog-2576) [BSOB] - Bit-select into 'GPIO_0_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(323): (vlog-2576) [BSOB] - Bit-select into 'GPIO_0_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(323): (vlog-2576) [BSOB] - Bit-select into 'GPIO_0_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(324): (vlog-2576) [BSOB] - Bit-select into 'GPIO_0_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(324): (vlog-2576) [BSOB] - Bit-select into 'last_GPIO_0_exp' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(333): (vlog-2576) [BSOB] - Bit-select into 'last_GPIO_0_exp' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(333): (vlog-2576) [BSOB] - Bit-select into 'GPIO_0_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(336): (vlog-2576) [BSOB] - Bit-select into 'GPIO_0_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(336): (vlog-2576) [BSOB] - Bit-select into 'GPIO_0_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(336): (vlog-2576) [BSOB] - Bit-select into 'GPIO_0_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(337): (vlog-2576) [BSOB] - Bit-select into 'GPIO_0_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(337): (vlog-2576) [BSOB] - Bit-select into 'last_GPIO_0_exp' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(346): (vlog-2576) [BSOB] - Bit-select into 'last_GPIO_0_exp' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(346): (vlog-2576) [BSOB] - Bit-select into 'GPIO_0_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(349): (vlog-2576) [BSOB] - Bit-select into 'GPIO_0_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(349): (vlog-2576) [BSOB] - Bit-select into 'GPIO_0_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(349): (vlog-2576) [BSOB] - Bit-select into 'GPIO_0_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(350): (vlog-2576) [BSOB] - Bit-select into 'GPIO_0_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(350): (vlog-2576) [BSOB] - Bit-select into 'last_GPIO_0_exp' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(359): (vlog-2576) [BSOB] - Bit-select into 'last_GPIO_0_exp' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(359): (vlog-2576) [BSOB] - Bit-select into 'GPIO_0_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(362): (vlog-2576) [BSOB] - Bit-select into 'GPIO_0_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(362): (vlog-2576) [BSOB] - Bit-select into 'GPIO_0_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(362): (vlog-2576) [BSOB] - Bit-select into 'GPIO_0_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(363): (vlog-2576) [BSOB] - Bit-select into 'GPIO_0_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(363): (vlog-2576) [BSOB] - Bit-select into 'last_GPIO_0_exp' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(372): (vlog-2576) [BSOB] - Bit-select into 'last_GPIO_0_exp' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(372): (vlog-2576) [BSOB] - Bit-select into 'GPIO_0_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(375): (vlog-2576) [BSOB] - Bit-select into 'GPIO_0_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(375): (vlog-2576) [BSOB] - Bit-select into 'GPIO_0_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(375): (vlog-2576) [BSOB] - Bit-select into 'GPIO_0_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(376): (vlog-2576) [BSOB] - Bit-select into 'GPIO_0_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(376): (vlog-2576) [BSOB] - Bit-select into 'last_GPIO_0_exp' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(385): (vlog-2576) [BSOB] - Bit-select into 'last_GPIO_0_exp' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(385): (vlog-2576) [BSOB] - Bit-select into 'GPIO_0_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(388): (vlog-2576) [BSOB] - Bit-select into 'GPIO_0_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(388): (vlog-2576) [BSOB] - Bit-select into 'GPIO_0_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(388): (vlog-2576) [BSOB] - Bit-select into 'GPIO_0_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(389): (vlog-2576) [BSOB] - Bit-select into 'GPIO_0_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(389): (vlog-2576) [BSOB] - Bit-select into 'last_GPIO_0_exp' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(398): (vlog-2576) [BSOB] - Bit-select into 'last_GPIO_0_exp' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(398): (vlog-2576) [BSOB] - Bit-select into 'GPIO_0_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(453): (vlog-2576) [BSOB] - Bit-select into 'GPIO_1_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(453): (vlog-2576) [BSOB] - Bit-select into 'GPIO_1_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(453): (vlog-2576) [BSOB] - Bit-select into 'GPIO_1_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(454): (vlog-2576) [BSOB] - Bit-select into 'GPIO_1_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(454): (vlog-2576) [BSOB] - Bit-select into 'last_GPIO_1_exp' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(463): (vlog-2576) [BSOB] - Bit-select into 'last_GPIO_1_exp' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(463): (vlog-2576) [BSOB] - Bit-select into 'GPIO_1_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(466): (vlog-2576) [BSOB] - Bit-select into 'GPIO_1_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(466): (vlog-2576) [BSOB] - Bit-select into 'GPIO_1_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(466): (vlog-2576) [BSOB] - Bit-select into 'GPIO_1_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(467): (vlog-2576) [BSOB] - Bit-select into 'GPIO_1_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(467): (vlog-2576) [BSOB] - Bit-select into 'last_GPIO_1_exp' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(476): (vlog-2576) [BSOB] - Bit-select into 'last_GPIO_1_exp' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(476): (vlog-2576) [BSOB] - Bit-select into 'GPIO_1_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(479): (vlog-2576) [BSOB] - Bit-select into 'GPIO_1_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(479): (vlog-2576) [BSOB] - Bit-select into 'GPIO_1_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(479): (vlog-2576) [BSOB] - Bit-select into 'GPIO_1_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(480): (vlog-2576) [BSOB] - Bit-select into 'GPIO_1_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(480): (vlog-2576) [BSOB] - Bit-select into 'last_GPIO_1_exp' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(489): (vlog-2576) [BSOB] - Bit-select into 'last_GPIO_1_exp' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(489): (vlog-2576) [BSOB] - Bit-select into 'GPIO_1_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(492): (vlog-2576) [BSOB] - Bit-select into 'GPIO_1_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(492): (vlog-2576) [BSOB] - Bit-select into 'GPIO_1_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(492): (vlog-2576) [BSOB] - Bit-select into 'GPIO_1_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(493): (vlog-2576) [BSOB] - Bit-select into 'GPIO_1_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(493): (vlog-2576) [BSOB] - Bit-select into 'last_GPIO_1_exp' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(502): (vlog-2576) [BSOB] - Bit-select into 'last_GPIO_1_exp' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(502): (vlog-2576) [BSOB] - Bit-select into 'GPIO_1_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(505): (vlog-2576) [BSOB] - Bit-select into 'GPIO_1_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(505): (vlog-2576) [BSOB] - Bit-select into 'GPIO_1_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(505): (vlog-2576) [BSOB] - Bit-select into 'GPIO_1_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(506): (vlog-2576) [BSOB] - Bit-select into 'GPIO_1_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(506): (vlog-2576) [BSOB] - Bit-select into 'last_GPIO_1_exp' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(515): (vlog-2576) [BSOB] - Bit-select into 'last_GPIO_1_exp' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(515): (vlog-2576) [BSOB] - Bit-select into 'GPIO_1_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(518): (vlog-2576) [BSOB] - Bit-select into 'GPIO_1_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(518): (vlog-2576) [BSOB] - Bit-select into 'GPIO_1_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(518): (vlog-2576) [BSOB] - Bit-select into 'GPIO_1_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(519): (vlog-2576) [BSOB] - Bit-select into 'GPIO_1_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(519): (vlog-2576) [BSOB] - Bit-select into 'last_GPIO_1_exp' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(528): (vlog-2576) [BSOB] - Bit-select into 'last_GPIO_1_exp' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(528): (vlog-2576) [BSOB] - Bit-select into 'GPIO_1_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(531): (vlog-2576) [BSOB] - Bit-select into 'GPIO_1_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(531): (vlog-2576) [BSOB] - Bit-select into 'GPIO_1_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(531): (vlog-2576) [BSOB] - Bit-select into 'GPIO_1_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(532): (vlog-2576) [BSOB] - Bit-select into 'GPIO_1_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(532): (vlog-2576) [BSOB] - Bit-select into 'last_GPIO_1_exp' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(541): (vlog-2576) [BSOB] - Bit-select into 'last_GPIO_1_exp' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(541): (vlog-2576) [BSOB] - Bit-select into 'GPIO_1_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(544): (vlog-2576) [BSOB] - Bit-select into 'GPIO_1_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(544): (vlog-2576) [BSOB] - Bit-select into 'GPIO_1_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(544): (vlog-2576) [BSOB] - Bit-select into 'GPIO_1_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(545): (vlog-2576) [BSOB] - Bit-select into 'GPIO_1_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(545): (vlog-2576) [BSOB] - Bit-select into 'last_GPIO_1_exp' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(554): (vlog-2576) [BSOB] - Bit-select into 'last_GPIO_1_exp' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(554): (vlog-2576) [BSOB] - Bit-select into 'GPIO_1_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(557): (vlog-2576) [BSOB] - Bit-select into 'GPIO_1_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(557): (vlog-2576) [BSOB] - Bit-select into 'GPIO_1_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(557): (vlog-2576) [BSOB] - Bit-select into 'GPIO_1_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(558): (vlog-2576) [BSOB] - Bit-select into 'GPIO_1_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(558): (vlog-2576) [BSOB] - Bit-select into 'last_GPIO_1_exp' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(567): (vlog-2576) [BSOB] - Bit-select into 'last_GPIO_1_exp' is out of bounds.
+# 
+# ** Warning: Waveform1.vwf.vt(567): (vlog-2576) [BSOB] - Bit-select into 'GPIO_1_expected_prev' is out of bounds.
+# 
+# -- Compiling module Lab10_1_vlg_vec_tst
+# 
+# Top level modules:
+# 	Lab10_1_vlg_vec_tst
+# vsim -L cycloneiii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -voptargs=\"+acc\" -t 1ps -novopt work.Lab10_1_vlg_vec_tst 
+# Loading work.Lab10_1_vlg_vec_tst
+# Loading work.Lab10_1
+# Loading cycloneiii_ver.cycloneiii_io_obuf
+# Loading cycloneiii_ver.cycloneiii_io_ibuf
+# Loading cycloneiii_ver.cycloneiii_lcell_comb
+# Loading altera_ver.dffeas
+# Loading cycloneiii_ver.cycloneiii_clkctrl
+# Loading cycloneiii_ver.cycloneiii_mux41
+# Loading cycloneiii_ver.cycloneiii_ena_reg
+# Loading work.Lab10_1_vlg_sample_tst
+# Loading work.Lab10_1_vlg_check_tst
+# Loading altera_ver.PRIM_GDFF_LOW
+# Simulation passed !
+# ** Note: $finish    : Waveform1.vwf.vt(633)
+#    Time: 1 us  Iteration: 0  Instance: /Lab10_1_vlg_vec_tst/tb_out

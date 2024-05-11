@@ -1,0 +1,89 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'CLK_GEN:CLK_U1|CLK_out'
+Slack : -2.563
+TNS   : -28.980
+
+Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
+Slack : -2.461
+TNS   : -36.721
+
+Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
+Slack : -0.116
+TNS   : -0.116
+
+Type  : Slow 1200mV 85C Model Hold 'CLK_GEN:CLK_U1|CLK_out'
+Slack : 0.721
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -21.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'KEY[2]'
+Slack : -3.000
+TNS   : -4.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLK_GEN:CLK_U1|CLK_out'
+Slack : -1.000
+TNS   : -15.000
+
+Type  : Slow 1200mV 0C Model Setup 'CLK_GEN:CLK_U1|CLK_out'
+Slack : -2.289
+TNS   : -25.286
+
+Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -2.147
+TNS   : -31.828
+
+Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
+Slack : -0.114
+TNS   : -0.114
+
+Type  : Slow 1200mV 0C Model Hold 'CLK_GEN:CLK_U1|CLK_out'
+Slack : 0.662
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -21.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'KEY[2]'
+Slack : -3.000
+TNS   : -4.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLK_GEN:CLK_U1|CLK_out'
+Slack : -1.000
+TNS   : -15.000
+
+Type  : Fast 1200mV 0C Model Setup 'CLK_GEN:CLK_U1|CLK_out'
+Slack : -1.157
+TNS   : -11.428
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -0.902
+TNS   : -12.085
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
+Slack : -0.091
+TNS   : -0.091
+
+Type  : Fast 1200mV 0C Model Hold 'CLK_GEN:CLK_U1|CLK_out'
+Slack : 0.383
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -22.317
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'KEY[2]'
+Slack : -3.000
+TNS   : -4.158
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLK_GEN:CLK_U1|CLK_out'
+Slack : -1.000
+TNS   : -15.000
+
+------------------------------------------------------------
