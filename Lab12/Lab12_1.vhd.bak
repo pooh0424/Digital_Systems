@@ -1,0 +1,33 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+use ieee.numeric_std.all;
+entity Lab12_1 is 
+port(	CLOCK_50:in std_logic;
+		Rout, Gout, Bout: out std_logic_vector(3 downto 0));
+		HOR_SYN,VER_SYN: OUT std_logic;
+		);
+end Lab12_1;
+
+architecture behavor of Lab12_1 is
+component VGA_sync IS
+	PORT(
+		CLOCK,RESET: IN std_logic;
+		HOR_SYN,VER_SYN,video_on: OUT std_logic;
+      row_counter:out INTEGER RANGE 0 TO 524;		
+      col_counter:out INTEGER RANGE 0 TO 799	);
+END component;
+ENTITY Vbar_display IS   
+	PORT( video_on:IN std_logic;
+   r,c: IN INTEGER RANGE 0 TO 799;
+	Rout, Gout, Bout: out std_logic_vector(3 downto 0));
+END component;
+signal clock25:std_logic;
+signal r,c:INTEGER RANGE 0 TO 799;
+signal video_on:std_logic;
+begin
+VGA_sync1:VGA_sync port map(clock25,'1',HOR_SYN,VER_SYN,video_on,r,c);
+Vbar_display1:Vbar_display port map(video_on,r,c,Rout,Gout,Bout);
+end Behavor;
+
+

@@ -1,0 +1,24 @@
+Library IEEE;
+use IEEE.STD_Logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+
+ENTITY dot_display IS   
+	PORT( video_on:IN std_logic;
+         r,c: IN INTEGER RANGE 0 TO 799;
+			 cr,cg,cb: IN STD_LOGIC_VECTOR(3 downto 0);
+		  Rout, Gout, Bout: out std_logic_vector(3 downto 0));
+END dot_display;
+
+ARCHITECTURE arch OF dot_display IS
+begin
+process(video_on,r,c) 
+begin
+If video_on='1' then         -- ] w   P C   d   H   ܯS w   m
+	 Rout<=cr; Gout<=cg; Bout<=cb;
+else                            --video time d   H ~        
+    Rout<="0000"; Gout<="0000"; Bout<="0000";
+end if;
+end process;
+
+END arch;

@@ -1,0 +1,149 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
+Slack : -6.352
+TNS   : -174.269
+
+Type  : Slow 1200mV 85C Model Setup 'ps2_keyboard_to_ascii:ps2_ACCLL|ascii_new'
+Slack : -2.130
+TNS   : -34.080
+
+Type  : Slow 1200mV 85C Model Setup 'CLK_DIV:clock_div1|CLK_out'
+Slack : -1.377
+TNS   : -20.235
+
+Type  : Slow 1200mV 85C Model Setup 'ps2_keyboard_to_ascii:ps2_ACCLL|ps2_keyboard:ps2_keyboard_0|debounce:debounce_ps2_clk|result'
+Slack : -0.086
+TNS   : -0.137
+
+Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
+Slack : -0.109
+TNS   : -0.109
+
+Type  : Slow 1200mV 85C Model Hold 'ps2_keyboard_to_ascii:ps2_ACCLL|ps2_keyboard:ps2_keyboard_0|debounce:debounce_ps2_clk|result'
+Slack : 0.400
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CLK_DIV:clock_div1|CLK_out'
+Slack : 0.493
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'ps2_keyboard_to_ascii:ps2_ACCLL|ascii_new'
+Slack : 0.577
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -79.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLK_DIV:clock_div1|CLK_out'
+Slack : -1.000
+TNS   : -20.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ps2_keyboard_to_ascii:ps2_ACCLL|ascii_new'
+Slack : -1.000
+TNS   : -16.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ps2_keyboard_to_ascii:ps2_ACCLL|ps2_keyboard:ps2_keyboard_0|debounce:debounce_ps2_clk|result'
+Slack : -1.000
+TNS   : -11.000
+
+Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -5.600
+TNS   : -149.395
+
+Type  : Slow 1200mV 0C Model Setup 'ps2_keyboard_to_ascii:ps2_ACCLL|ascii_new'
+Slack : -1.801
+TNS   : -28.792
+
+Type  : Slow 1200mV 0C Model Setup 'CLK_DIV:clock_div1|CLK_out'
+Slack : -1.154
+TNS   : -16.172
+
+Type  : Slow 1200mV 0C Model Setup 'ps2_keyboard_to_ascii:ps2_ACCLL|ps2_keyboard:ps2_keyboard_0|debounce:debounce_ps2_clk|result'
+Slack : -0.034
+TNS   : -0.034
+
+Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
+Slack : -0.097
+TNS   : -0.097
+
+Type  : Slow 1200mV 0C Model Hold 'ps2_keyboard_to_ascii:ps2_ACCLL|ps2_keyboard:ps2_keyboard_0|debounce:debounce_ps2_clk|result'
+Slack : 0.362
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CLK_DIV:clock_div1|CLK_out'
+Slack : 0.427
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'ps2_keyboard_to_ascii:ps2_ACCLL|ascii_new'
+Slack : 0.519
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -79.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLK_DIV:clock_div1|CLK_out'
+Slack : -1.000
+TNS   : -20.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ps2_keyboard_to_ascii:ps2_ACCLL|ascii_new'
+Slack : -1.000
+TNS   : -16.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ps2_keyboard_to_ascii:ps2_ACCLL|ps2_keyboard:ps2_keyboard_0|debounce:debounce_ps2_clk|result'
+Slack : -1.000
+TNS   : -11.000
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -3.116
+TNS   : -71.950
+
+Type  : Fast 1200mV 0C Model Setup 'ps2_keyboard_to_ascii:ps2_ACCLL|ascii_new'
+Slack : -0.749
+TNS   : -11.976
+
+Type  : Fast 1200mV 0C Model Setup 'CLK_DIV:clock_div1|CLK_out'
+Slack : -0.331
+TNS   : -3.164
+
+Type  : Fast 1200mV 0C Model Setup 'ps2_keyboard_to_ascii:ps2_ACCLL|ps2_keyboard:ps2_keyboard_0|debounce:debounce_ps2_clk|result'
+Slack : 0.262
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
+Slack : -0.140
+TNS   : -0.140
+
+Type  : Fast 1200mV 0C Model Hold 'ps2_keyboard_to_ascii:ps2_ACCLL|ps2_keyboard:ps2_keyboard_0|debounce:debounce_ps2_clk|result'
+Slack : 0.207
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLK_DIV:clock_div1|CLK_out'
+Slack : 0.270
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'ps2_keyboard_to_ascii:ps2_ACCLL|ascii_new'
+Slack : 0.310
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -83.540
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLK_DIV:clock_div1|CLK_out'
+Slack : -1.000
+TNS   : -20.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ps2_keyboard_to_ascii:ps2_ACCLL|ascii_new'
+Slack : -1.000
+TNS   : -16.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ps2_keyboard_to_ascii:ps2_ACCLL|ps2_keyboard:ps2_keyboard_0|debounce:debounce_ps2_clk|result'
+Slack : -1.000
+TNS   : -11.000
+
+------------------------------------------------------------
